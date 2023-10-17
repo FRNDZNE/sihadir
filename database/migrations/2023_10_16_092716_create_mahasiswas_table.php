@@ -18,7 +18,6 @@ return new class extends Migration
             $table->foreignId('kelas_id')->references('id')->on('kelas')->onDelete('cascade');
             $table->foreignId('semester_id')->references('id')->on('semesters')->onDelete('cascade');
             $table->string('nim');
-            $table->string('name');
             $table->enum('gender',['pria','wanita']);
             $table->string('foto');
             $table->timestamps();
