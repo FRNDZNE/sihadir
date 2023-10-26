@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-@include('dosen,php');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home',function(){
+    if (Auth::user()->hasRole('admin')) {
+        return redirect()->route('admin.dashboard');
+    }else if (Auth::user()->hasRole('dosen')) {
+        return redirect()->route('dosen.dashboard');
+    }else {
+        return redirect()->route('mahasiswa.dashboard');
+    }
+});
+@include('admin.php');
+@include('dosen.php');
 @include('mahasiswa.php');
