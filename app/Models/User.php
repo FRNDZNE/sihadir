@@ -41,4 +41,14 @@ class User extends Authenticatable implements LaratrustUser
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function dosen()
+    {
+        return $this->hasOne('App\Models\Dosen');
+    }
+
+    public function mahasiswa()
+    {
+        return $this->hasOne('App\Models\Dosen');
+    }
 }
