@@ -1,8 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <title>SIHADIR</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="{{ asset('/') }}/images/sihadir.ico">
+    <link rel="stylesheet" href="{{ asset('/') }}/front/style.css">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -33,7 +36,7 @@
                         <p>Input your email, and password</p>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control form-control-lg bg-light fs-6" placeholder="Email Address" name="email">
+                        <input type="email" class="form-control form-control-lg bg-light fs-6" placeholder="Email Address" name="email" name="email">
                     </div>
                     <div class="input-group mb-5">
                         <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" name="password">
@@ -66,39 +69,3 @@
     </div>
 </body>
 </html>
-
-<style>
-    .body {
-        background: #ececec;
-    }
-    .featured-image img{
-        width: 250px;
-    }
-    .box-area{
-        width: 1100px;
-        height: 600px;
-    }
-    .right-box{
-        padding: 40px 30px 40px 40px;
-    }
-    ::placeholder{
-        font-size: 16px;
-    }
-
-    @media only screen and (max-width: 768px) {
-        .box-area{
-            margin: 0 10px;
-
-        }
-        .left-box{
-            height: 250px;
-            overflow: hidden;
-        }
-        .featured-image img{
-            width: 150px;
-        }
-        .right-box{
-            padding: 20px;
-        }
-    }
-</style>
