@@ -19,9 +19,6 @@
         Route::post('/mahasiswa/update/{id}',[App\Http\Controllers\Admin\MahasiswaController::class,'update'])->name('admin.mahasiswa.update');
         Route::post('/mahasiswa/delete/{id}',[App\Http\Controllers\Admin\MahasiswaController::class,'delete'])->name('admin.mahasiswa.delete');
 
-<<<<<<< HEAD
-        // Route CRUD
-=======
         // Route CRUD JAM
         Route::get('/jam',[App\Http\Controllers\Admin\JamController::class,'index'])->name('admin.jam.index');
         Route::post('/jam/store',[App\Http\Controllers\Admin\JamController::class,'store'])->name('admin.jam.store');
@@ -51,5 +48,4 @@
         Route::post('/angkatan/store',[App\Http\Controllers\Admin\AngkatanController::class,'store'])->name('admin.angkatan.store');
         Route::post('/angkatan/update',[App\Http\Controllers\Admin\AngkatanController::class,'update'])->name('admin.angkatan.update');
         Route::post('/angkatan/delete/{id}',[App\Http\Controllers\Admin\AngkatanController::class,'index'])->name('admin.angkatan.delete');
->>>>>>> a2b0d4a3f5c2e23387ecc7e7d64ddde8a5321ba5
     });
