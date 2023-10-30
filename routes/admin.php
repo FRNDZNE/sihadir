@@ -23,29 +23,29 @@
         Route::get('/jam',[App\Http\Controllers\Admin\JamController::class,'index'])->name('admin.jam.index');
         Route::post('/jam/store',[App\Http\Controllers\Admin\JamController::class,'store'])->name('admin.jam.store');
         Route::post('/jam/update',[App\Http\Controllers\Admin\JamController::class,'update'])->name('admin.jam.update');
-        Route::post('/jam/delete/{id}',[App\Http\Controllers\Admin\JamController::class,'index'])->name('admin.jam.delete');
+        Route::post('/jam/delete/{id}',[App\Http\Controllers\Admin\JamController::class,'delete'])->name('admin.jam.delete');
 
         // Route CRUD RUANGAN
         Route::get('/ruangan',[App\Http\Controllers\Admin\RuanganController::class,'index'])->name('admin.ruangan.index');
         Route::post('/ruangan/store',[App\Http\Controllers\Admin\RuanganController::class,'store'])->name('admin.ruangan.store');
         Route::post('/ruangan/update',[App\Http\Controllers\Admin\RuanganController::class,'update'])->name('admin.ruangan.update');
-        Route::post('/ruangan/delete/{id}',[App\Http\Controllers\Admin\RuanganController::class,'index'])->name('admin.ruangan.delete');
+        Route::post('/ruangan/delete/{id}',[App\Http\Controllers\Admin\RuanganController::class,'delete'])->name('admin.ruangan.delete');
 
         // Route CRUD KELAS
         Route::get('/kelas',[App\Http\Controllers\Admin\KelasController::class,'index'])->name('admin.kelas.index');
         Route::post('/kelas/store',[App\Http\Controllers\Admin\KelasController::class,'store'])->name('admin.kelas.store');
         Route::post('/kelas/update',[App\Http\Controllers\Admin\KelasController::class,'update'])->name('admin.kelas.update');
-        Route::post('/kelas/delete/{id}',[App\Http\Controllers\Admin\KelasController::class,'index'])->name('admin.kelas.delete');
+        Route::post('/kelas/delete/{id}',[App\Http\Controllers\Admin\KelasController::class,'delete'])->name('admin.kelas.delete');
 
         // Route CRUD SEMESTER
         Route::get('/semester',[App\Http\Controllers\Admin\SemesterController::class,'index'])->name('admin.semester.index');
         Route::post('/semester/store',[App\Http\Controllers\Admin\SemesterController::class,'store'])->name('admin.semester.store');
         Route::post('/semester/update',[App\Http\Controllers\Admin\SemesterController::class,'update'])->name('admin.semester.update');
-        Route::post('/semester/delete/{id}',[App\Http\Controllers\Admin\SemesterController::class,'index'])->name('admin.semester.delete');
+        Route::post('/semester/delete/{id}',[App\Http\Controllers\Admin\SemesterController::class,'delete'])->name('admin.semester.delete');
 
         // Route CRUD ANGKATAN
         Route::get('/angkatan',[App\Http\Controllers\Admin\AngkatanController::class,'index'])->name('admin.angkatan.index');
         Route::post('/angkatan/store',[App\Http\Controllers\Admin\AngkatanController::class,'store'])->name('admin.angkatan.store');
         Route::post('/angkatan/update',[App\Http\Controllers\Admin\AngkatanController::class,'update'])->name('admin.angkatan.update');
-        Route::post('/angkatan/delete/{id}',[App\Http\Controllers\Admin\AngkatanController::class,'index'])->name('admin.angkatan.delete');
+        Route::post('/angkatan/delete/{id}',[App\Http\Controllers\Admin\AngkatanController::class,'delete'])->name('admin.angkatan.delete');
     });
