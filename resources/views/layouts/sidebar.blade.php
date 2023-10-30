@@ -30,7 +30,7 @@
                     <a href="{{ route('admin.dashboard') }}" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                        Dashoboard
+                            Dashoboard
                         </p>
                     </a>
                     </li>
@@ -56,7 +56,19 @@
                         <p>Kelas</p>
                     </a>
                     </li>
-                    <li class="nav-header">Angkatan</li>
+                    <li class="nav-item">
+                    <a href="https://adminlte.io/docs/3.0" class="nav-link">
+                        <i class="nav-icon fas fa-file"></i>
+                        <p>Angkatan</p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="https://adminlte.io/docs/3.0" class="nav-link">
+                        <i class="nav-icon fas fa-file"></i>
+                        <p>Semester</p>
+                    </a>
+                    </li>
+                    <li class="nav-header">ABSENSI</li>
                     <li class="nav-item">
                     <a href="https://adminlte.io/docs/3.0" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
