@@ -33,10 +33,10 @@
                         <p>Input your email, and password</p>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email Address">
+                        <input type="email" class="form-control form-control-lg bg-light fs-6" placeholder="Email Address" name="email">
                     </div>
                     <div class="input-group mb-5">
-                        <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
+                        <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" name="password">
                     </div>
                     <div class="input-group mb-5">
                         <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Login</button>
