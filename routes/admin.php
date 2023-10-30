@@ -18,4 +18,6 @@
         Route::get('/mahasiswa/edit/{id}',[App\Http\Controllers\Admin\MahasiswaController::class,'edit'])->name('admin.mahasiswa.edit');
         Route::post('/mahasiswa/update/{id}',[App\Http\Controllers\Admin\MahasiswaController::class,'update'])->name('admin.mahasiswa.update');
         Route::post('/mahasiswa/delete/{id}',[App\Http\Controllers\Admin\MahasiswaController::class,'delete'])->name('admin.mahasiswa.delete');
+
+        // Route CRUD
     });
