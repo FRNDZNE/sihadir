@@ -37,8 +37,7 @@
             <a href="../calendar.html" class="nav-link">
                 <i class="nav-icon far fa-calendar-alt"></i>
                 <p>
-                Dosen
-                <span class="badge badge-info right">2</span>
+                    Dosen
                 </p>
             </a>
             </li>
