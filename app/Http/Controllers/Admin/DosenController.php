@@ -47,18 +47,35 @@ class DosenController extends Controller
         return redirect()->route('admin.dosen.index');
     }
 
-    public function edit()
+    public function edit($id)
     {
-
+        $data = User::where('id',$id)->with('dosen')->first();
+        return view('admin.dosen.edit',compact('data'));
     }
 
-    public function update()
+    public function update(Request $request, $id)
     {
+        $user = User::where('id',$id)->first();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        if (isset($request->password)) {
+            $user->password = bcrypt($request->password);
+        } else {
+            unset($user->password);
+        }
+        $user->save();
 
+        $dosen = Dosen::where('user_id',$id)->first();
+        $dosen->nip = $request->nip;
+        $dosen->gender = $request->gender;
+        $dosen->foto = 'Udah Berubah WKWKWWK';
+        $dosen->save();
+        return redirect()->route('admin.dosen.index');
     }
 
-    public function delete()
+    public function delete($id)
     {
-
+        User::find($id)->delete();
+        return redirect()->back();
     }
 }
