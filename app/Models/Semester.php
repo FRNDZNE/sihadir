@@ -10,4 +10,9 @@ class Semester extends Model
     use HasFactory;
     protected $table = 'semesters';
     protected $guarded = [];
+
+    public function mahasiswa()
+    {
+        return $this->belongsToMany('App\Models\Mahasiswa');
+    }
 }

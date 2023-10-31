@@ -7,7 +7,6 @@
             style="opacity: .8">
         <span class="brand-text font-weight-light">SIHADIR</span>
     </a>
-
     <!-- Sidebar -->
     @auth
         @role('admin')
@@ -45,30 +44,30 @@
                     </li>
                     <li class="nav-header">DATA MAHASISWA</li>
                     <li class="nav-item">
-                    <a href="https://adminlte.io/docs/3.0" class="nav-link">
+                    <a href="{{ route('admin.mahasiswa.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
                         <p>Mahasiswa</p>
                     </a>
                     </li>
                     <li class="nav-item">
-                    <a href="https://adminlte.io/docs/3.0" class="nav-link">
+                    <a href="{{ route('admin.kelas.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
                         <p>Kelas</p>
                     </a>
                     </li>
                     <li class="nav-item">
-                    <a href="https://adminlte.io/docs/3.0" class="nav-link">
+                    <a href="{{ route('admin.angkatan.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
                         <p>Angkatan</p>
                     </a>
                     </li>
                     <li class="nav-item">
-                    <a href="https://adminlte.io/docs/3.0" class="nav-link">
+                    <a href="{{ route('admin.semester.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
                         <p>Semester</p>
                     </a>
                     </li>
-                    <li class="nav-header">ABSENSI</li>
+                    <li class="nav-header">ABSENSI (COMING SOON)</li>
                     <li class="nav-item">
                     <a href="https://adminlte.io/docs/3.0" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
@@ -76,9 +75,9 @@
                     </a>
                     </li>
                     <li class="nav-item">
-                    <a href="https://adminlte.io/docs/3.0" class="nav-link">
+                    <a href="{{ route('admin.jam.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
-                        <p>JADWAL</p>
+                        <p>JAM</p>
                     </a>
                     </li>
                 </ul>
