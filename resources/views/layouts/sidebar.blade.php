@@ -69,7 +69,7 @@
                     </li>
                     <li class="nav-header">ABSENSI (COMING SOON)</li>
                     <li class="nav-item">
-                    <a href="https://adminlte.io/docs/3.0" class="nav-link">
+                    <a href="{{ route('admin.matkul.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
                         <p>MATA KULIAH</p>
                     </a>
@@ -78,6 +78,12 @@
                     <a href="{{ route('admin.jam.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
                         <p>JAM</p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="{{ route('admin.ruangan.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-file"></i>
+                        <p>RUANGAN</p>
                     </a>
                     </li>
                 </ul>

@@ -15,4 +15,9 @@ class Semester extends Model
     {
         return $this->belongsToMany('App\Models\Mahasiswa');
     }
+
+    public function matkul()
+    {
+        return $this->hasMany('App\Models\Matkul');
+    }
 }

@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Matkul extends Model
 {
     use HasFactory;
+    protected $table = 'matkuls';
+    protected $guarded = [];
+
+    public function semester()
+    {
+        return $this->belongsTo('App\Models\Semester');
+    }
 }

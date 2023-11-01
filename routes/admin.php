@@ -48,4 +48,11 @@
         Route::post('/angkatan/store',[App\Http\Controllers\Admin\AngkatanController::class,'store'])->name('admin.angkatan.store');
         Route::post('/angkatan/update',[App\Http\Controllers\Admin\AngkatanController::class,'update'])->name('admin.angkatan.update');
         Route::post('/angkatan/delete/{id}',[App\Http\Controllers\Admin\AngkatanController::class,'delete'])->name('admin.angkatan.delete');
+
+        // Route Mata Kuliah
+        Route::get('/matakuliah',[App\Http\Controllers\Admin\MatkulController::class,'index'])->name('admin.matkul.index');
+        Route::get('/matakuliah/semester/{smt}',[App\Http\Controllers\Admin\MatkulController::class,'index_matkul'])->name('admin.matkul.smt.index');
+        Route::post('/matakuliah/semester/{smt}/store',[App\Http\Controllers\Admin\MatkulController::class,'store'])->name('admin.matkul.smt.store');
+        Route::post('/matakuliah/semester/{smt}/update',[App\Http\Controllers\Admin\MatkulController::class,'update'])->name('admin.matkul.smt.update');
+        Route::post('/matakuliah/semester/{smt}/delete/{mk}',[App\Http\Controllers\Admin\MatkulController::class,'delete'])->name('admin.matkul.smt.delete');
     });
