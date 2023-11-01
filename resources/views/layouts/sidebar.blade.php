@@ -86,6 +86,12 @@
                         <p>RUANGAN</p>
                     </a>
                     </li>
+                    <li class="nav-item">
+                    <a href="{{ route('admin.day.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-file"></i>
+                        <p>HARI</p>
+                    </a>
+                    </li>
                 </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

@@ -49,6 +49,12 @@
         Route::post('/angkatan/update',[App\Http\Controllers\Admin\AngkatanController::class,'update'])->name('admin.angkatan.update');
         Route::post('/angkatan/delete/{id}',[App\Http\Controllers\Admin\AngkatanController::class,'delete'])->name('admin.angkatan.delete');
 
+        // Route CRUD DAY
+        Route::get('/day',[App\Http\Controllers\Admin\DayController::class,'index'])->name('admin.day.index');
+        Route::post('/day/store',[App\Http\Controllers\Admin\DayController::class,'store'])->name('admin.day.store');
+        Route::post('/day/update',[App\Http\Controllers\Admin\DayController::class,'update'])->name('admin.day.update');
+        Route::post('/day/delete/{id}',[App\Http\Controllers\Admin\DayController::class,'delete'])->name('admin.day.delete');
+
         // Route Mata Kuliah
         Route::get('/matakuliah',[App\Http\Controllers\Admin\MatkulController::class,'index'])->name('admin.matkul.index');
         Route::get('/matakuliah/semester/{smt}',[App\Http\Controllers\Admin\MatkulController::class,'index_matkul'])->name('admin.matkul.smt.index');
