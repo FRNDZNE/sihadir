@@ -67,7 +67,13 @@
                         <p>Semester</p>
                     </a>
                     </li>
-                    <li class="nav-header">ABSENSI (COMING SOON)</li>
+                    <li class="nav-header">PENJADWALAN</li>
+                    <li class="nav-item">
+                    <a href="{{ route('admin.penjadawalan.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-file"></i>
+                        <p>JADWAL</p>
+                    </a>
+                    </li>
                     <li class="nav-item">
                     <a href="{{ route('admin.matkul.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>

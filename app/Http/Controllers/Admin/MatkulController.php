@@ -17,9 +17,12 @@ class MatkulController extends Controller
 
     public function index_matkul($smt)
     {
-        $semester = Semester::where('id',$smt)->with('matkul')->first();
-        // return $semester;
-        return view('admin.matkul.matkul',compact('semester'));
+        $semester = Semester::where('id',$smt)->first();
+        $matkul = Matkul::where('semester_id',$smt)->get();
+        return view('admin.matkul.matkul')->with([
+            'semester' => $semester,
+            'matkul' => $matkul,
+        ]);
     }
 
     public function store(Request $request, $id)

@@ -45,17 +45,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($semester->matkul as $matkul)
+                    @foreach($matkul as $m)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $matkul->name }}</td>
+                        <td>{{ $m->name }}</td>
                         <td>
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modaledit-{{$matkul->id}}">
+                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modaledit-{{$m->id}}">
                                 <i class="fas fa-edit"></i> 
                             </button>
                             <!-- Modal -->
-                            <div class="modal fade" id="modaledit-{{$matkul->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                            <div class="modal fade" id="modaledit-{{$m->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header bg-warning">
@@ -64,13 +64,13 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <form action="{{route('admin.matkul.smt.update', $matkul->semester_id)}}" method="post">
+                                        <form action="{{route('admin.matkul.smt.update', $semester->id)}}" method="post">
                                             @csrf
                                             <div class="modal-body">
-                                                <input type="hidden" name="id" value="{{$matkul->id}}">
+                                                <input type="hidden" name="id" value="{{$m->id}}">
                                                 <div class="form-group">
                                                     <label for="semester">semester</label>
-                                                    <input type="text" name="name" id="semester" value="{{$matkul->name}}" class="form-control" placeholder="Masukan semester" aria-describedby="helpId">
+                                                    <input type="text" name="name" id="semester" value="{{$m->name}}" class="form-control" placeholder="Masukan semester" aria-describedby="helpId">
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
@@ -82,12 +82,12 @@
                                 </div>  
                             </div>
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modaldelete-{{$matkul->id}}">
+                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modaldelete-{{$m->id}}">
                               <i class="fas fa-trash"></i>
                             </button>
                             
                             <!-- Modal -->
-                            <div class="modal fade" id="modaldelete-{{$matkul->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                            <div class="modal fade" id="modaldelete-{{$m->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header bg-danger">
@@ -97,11 +97,11 @@
                                                 </button>
                                         </div>
                                         <div class="modal-body">
-                                            Ingin menghapus semester {{$matkul->name}} ?
+                                            Ingin menghapus semester {{$m->name}} ?
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <form action="{{route('admin.matkul.smt.delete',[$matkul->semester_id, $matkul->id])}}" method="post">
+                                            <form action="{{route('admin.matkul.smt.delete',[$semester->id, $m->id])}}" method="post">
                                                 @csrf
                                                 <button type="submit" class="btn btn-danger">Hapus</button>
                                             </form>

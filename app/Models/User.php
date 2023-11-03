@@ -52,4 +52,5 @@ class User extends Authenticatable implements LaratrustUser
         return $this->hasOne('App\Models\Mahasiswa');
     }
 
+    
 }
