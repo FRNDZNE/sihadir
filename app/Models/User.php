@@ -52,5 +52,10 @@ class User extends Authenticatable implements LaratrustUser
         return $this->hasOne('App\Models\Mahasiswa');
     }
 
+    public function jadwal()
+    {
+        return $this->hasMany('App\Models\Jadwal');
+    }
+
     
 }

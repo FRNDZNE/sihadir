@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jam_jadwal', function (Blueprint $table) {
-            $table->foreignId('jam_id')->references('id')->on('jams')->onDelete('cascade');
+        Schema::create('jadwal_jam', function (Blueprint $table) {
             $table->foreignId('jadwal_id')->references('id')->on('jadwals')->onDelete('cascade');
+            $table->foreignId('jam_id')->references('id')->on('jams')->onDelete('cascade');
         });
     }
 
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('jam_jadwal');
+        Schema::dropIfExists('jadwal_jam');
     }
 };

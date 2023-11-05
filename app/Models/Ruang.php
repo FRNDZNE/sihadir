@@ -10,4 +10,9 @@ class Ruang extends Model
     use HasFactory;
     protected $table = 'ruangs';
     protected $guarded = [];
+
+    public function jadwal()
+    {
+        return $this->hasMany('App\Models\Jadwal');
+    }
 }

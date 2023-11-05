@@ -69,7 +69,7 @@
                     </li>
                     <li class="nav-header">PENJADWALAN</li>
                     <li class="nav-item">
-                    <a href="{{ route('admin.penjadawalan.index') }}" class="nav-link">
+                    <a href="{{ route('admin.penjadwalan.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
                         <p>JADWAL</p>
                     </a>

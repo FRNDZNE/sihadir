@@ -15,4 +15,10 @@ class Kelas extends Model
     {
         return $this->belongsToMany('App\Models\Mahasiswa');
     }
+
+    public function jadwal()
+    {
+        return $this->hasMany('App\Models\Jadwal');
+    }
+
 }

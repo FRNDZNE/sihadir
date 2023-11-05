@@ -83,9 +83,14 @@
         // CRUD PENJADWALAN
         Route::prefix('penjadwalan')->group(function(){
             Route::get('/',[App\Http\Controllers\Admin\JadwalController::class,'index'])->name('admin.penjadwalan.index');
-            Route::get('/',[App\Http\Controllers\Admin\JadwalController::class,'index'])->name('admin.penjadwalan.index');
-            Route::get('/',[App\Http\Controllers\Admin\JadwalController::class,'index'])->name('admin.penjadwalan.index');
-            Route::get('/',[App\Http\Controllers\Admin\JadwalController::class,'index'])->name('admin.penjadwalan.index');
+            Route::get('/{smt}',[App\Http\Controllers\Admin\JadwalController::class,'index_smt'])->name('admin.penjadwalan.semester.index');
+            Route::get('/{smt}/{kls}',[App\Http\Controllers\Admin\JadwalController::class,'index_kls'])->name('admin.penjadwalan.kelas.index');
+            // Penjadwalan based on Semester, Class and Day
+            Route::get('/{smt}/{kls}/{day}',[App\Http\Controllers\Admin\JadwalController::class,'index_jadwal'])->name('admin.penjadwalan.hari.index');
+            Route::post('/{smt}/{kls}/{day}/store',[App\Http\Controllers\Admin\JadwalController::class,'store_jadwal'])->name('admin.penjadwalan.hari.store');
+            Route::post('/{smt}/{kls}/{day}/update',[App\Http\Controllers\Admin\JadwalController::class,'update_jadwal'])->name('admin.penjadwalan.hari.update');
+            Route::post('/{smt}/{kls}/{day}/delete/{id}',[App\Http\Controllers\Admin\JadwalController::class,'delete_jadwal'])->name('admin.penjadwalan.hari.delete');
+            
 
         });
 

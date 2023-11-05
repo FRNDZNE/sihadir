@@ -15,7 +15,7 @@
                     @foreach($semester as $s)
                     <tr>
                         <td>{{ $loop->iteration}}</td>
-                        <td><a href="{{  }}">Semester {{ $s->name}}</a></td>
+                        <td><a href="{{ route('admin.penjadwalan.semester.index',$s->id) }}">Semester {{ $s->name}}</a></td>
                     </tr>
                     @endforeach
                 </tbody>

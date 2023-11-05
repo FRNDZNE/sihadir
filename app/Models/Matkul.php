@@ -15,4 +15,9 @@ class Matkul extends Model
     {
         return $this->belongsTo('App\Models\Semester');
     }
+
+    public function jadwal()
+    {
+        return $this->hasMany('App\Models\Jadwal');
+    }
 }
