@@ -19,6 +19,10 @@ class Jadwal extends Model
     {
         return $this->belongsTo('App\Models\Kelas');
     }
+    public function semester()
+    {
+        return $this->belongsTo('App\Models\Semester');
+    }
     public function ruang()
     {
         return $this->belongsTo('App\Models\Ruang');

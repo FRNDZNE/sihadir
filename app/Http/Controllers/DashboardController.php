@@ -3,6 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Dosen;
+use App\Models\Mahasiswa;
+use App\Models\Jadwal;
+use App\Models\Semester;
+use App\Models\Kelas;
+use App\Models\Day;
+use Auth;
+
 
 class DashboardController extends Controller
 {
@@ -16,7 +25,10 @@ class DashboardController extends Controller
     }
     public function dosen()
     {
-        return view('dosen.dashboard');
+        $data = Jadwal::where('dosen_id',Auth::user()->id)->with([
+            'kelas','ruang','day','jam','dosen','matkul','semester'
+        ])->get();
+        return view('dosen.dashboard',compact('data'));
     }
     public function mahasiswa()
     {

@@ -20,4 +20,8 @@ class Semester extends Model
     {
         return $this->hasMany('App\Models\Matkul');
     }
+    public function jadwal()
+    {
+        return $this->hasMany('App\Models\Jadwal');
+    }
 }
