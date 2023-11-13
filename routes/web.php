@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('guest');
 
 Auth::routes();
 
@@ -25,9 +26,13 @@ Route::get('/home',function(){
         return redirect()->route('admin.dashboard');
     }else if (Auth::user()->hasRole('dosen')) {
         return redirect()->route('dosen.dashboard');
-    }else {
+    }else if(Auth::user()->hasRole('mahasiswa')){
         return redirect()->route('mahasiswa.dashboard');
+    }else {
+        return 'Anda Tidak Punya Role';
     }
+
+    
 });
 @include('admin.php');
 @include('dosen.php');

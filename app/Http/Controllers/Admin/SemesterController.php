@@ -19,7 +19,7 @@ class SemesterController extends Controller
         Semester::create([
             'name' => $request->name,
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menambah Data');
     }
     public function update(Request $request){
         $data = Semester::find( $request->id );

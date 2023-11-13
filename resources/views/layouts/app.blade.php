@@ -14,6 +14,12 @@
   <link rel="stylesheet" href="{{asset('/')}}/template/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="{{ asset('/') }}/template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="{{ asset('/') }}/template/plugins/toastr/toastr.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ asset('/') }}/template/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -85,7 +91,12 @@
   </footer>
 </div>
 <!-- ./wrapper -->
-
+$('.swalDefaultSuccess').click(function() {
+      Toast.fire({
+        type: 'success',
+        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+      })
+  });
 <!-- jQuery -->
 <script src="{{asset('/')}}/template/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -94,5 +105,28 @@
 <script src="{{asset('/')}}/template/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('/')}}/template/dist/js/demo.js"></script>
+<!-- SweetAlert2 -->
+<script src="{{ asset('/') }}/template/plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- Toastr -->
+<script src="{{ asset('/') }}/template/plugins/toastr/toastr.min.js"></script>
+
+  @if (Session::has('success'))
+    <script>
+    $('.swalDefaultSuccess').click(function() {
+      Toast.fire({
+        type: 'success',
+        title: '{{Session::get('success')}}'
+      })
+    });
+    </script>
+  @endif
+  <script>
+    $('.swalDefaultSuccess').click(function() {
+      Toast.fire({
+        type: 'success',
+        title: 'Testing'
+      })
+    });
+    </script>
 </body>
 </html>
