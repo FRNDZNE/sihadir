@@ -11,7 +11,7 @@ use App\Models\Semester;
 use App\Models\Kelas;
 use App\Models\Day;
 use Auth;
-
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -23,12 +23,22 @@ class DashboardController extends Controller
     {
         return view('admin.dashboard');
     }
-    public function dosen()
+    public function dosen(Request $request)
     {
-        $data = Jadwal::where('dosen_id',Auth::user()->id)->with([
-            'kelas','ruang','day','jam','dosen','matkul','semester'
-        ])->get();
-        return view('dosen.dashboard',compact('data'));
+        $data = Jadwal::where('dosen_id', $request->user()->id)
+            ->with(['kelas', 'ruang', 'day', 'jam', 'dosen', 'matkul', 'semester'])
+            ->get();
+
+        $counter = collect([]);
+        if ($data->count() > 0) {
+            $counter = Mahasiswa::select(['kelas_id', 'semester_id', DB::raw('count(*) as total')])
+                ->whereIn('kelas_id', $data->pluck('kelas_id'))
+                ->with('semester:id,name', 'kelas:id,name') // for debuging purpose, remove if not needed
+                ->groupBy(['kelas_id', 'semester_id'])
+                ->get();
+        }
+
+        return view('dosen.dashboard', compact('data', 'counter'));
     }
     public function mahasiswa()
     {

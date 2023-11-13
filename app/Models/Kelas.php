@@ -13,7 +13,7 @@ class Kelas extends Model
 
     public function mahasiswa()
     {
-        return $this->belongsToMany('App\Models\Mahasiswa');
+        return $this->hasMany(Mahasiswa::class);
     }
 
     public function jadwal()

@@ -22,11 +22,11 @@ class Mahasiswa extends Model
     }
     public function kelas()
     {
-        return $this->hasOne('App\Models\Kelas');
+        return $this->belongsTo('App\Models\Kelas');
     }
     public function semester()
     {
-        return $this->hasOne('App\Models\Semester');
+        return $this->belongsTo('App\Models\Semester');
     }
 
 
