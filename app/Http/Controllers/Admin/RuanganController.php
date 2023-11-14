@@ -20,7 +20,7 @@ class RuanganController extends Controller
         $data->name = $request->name;
         $data->save();
 
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menambah Data');
     }
     public function update(Request $request){
         
@@ -30,11 +30,11 @@ class RuanganController extends Controller
         $data->update([
             'name' => $request->name,
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Mengubah Data');
     }
     public function delete($id){
         
         Ruang::find($id)->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menghapus Data');
     }
 }

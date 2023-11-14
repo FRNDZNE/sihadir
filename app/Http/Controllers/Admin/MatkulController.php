@@ -32,7 +32,7 @@ class MatkulController extends Controller
         $matkul->semester_id = $semester->id;
         $matkul->name = $request->name;
         $matkul->save();
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menambah Data');
     }
 
     public function update(Request $request, $id)
@@ -41,12 +41,12 @@ class MatkulController extends Controller
         $matkul = Matkul::where('semester_id',$id)->first();
         $matkul->name = $request->name;
         $matkul->save();
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Mengubah Data');
     }
 
     public function delete($id,$mk)
     {
         Matkul::where('id',$mk)->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menghapus Data');
     }
 }

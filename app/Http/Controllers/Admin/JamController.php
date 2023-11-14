@@ -19,7 +19,7 @@ class JamController extends Controller
         $data = new Jam;
         $data->name = $request->name;
         $data->save();
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menambah Data');
 
     }
     public function update(Request $request){
@@ -29,11 +29,11 @@ class JamController extends Controller
         $data->update([
             'name'=>$request->name,
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Mengubah Data');
     }
     public function delete($id){
         Jam::find($id)->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menghapus Data');
     }
 
 }

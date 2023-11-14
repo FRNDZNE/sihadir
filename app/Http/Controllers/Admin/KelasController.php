@@ -20,7 +20,7 @@ class KelasController extends Controller
         Kelas::create([
             'name' => $request->name,
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menambah Data');
     }
     public function update(Request $request){
         // $data = Kelas::find( $request->id );
@@ -29,13 +29,13 @@ class KelasController extends Controller
 
         $data = $request->all();
         $kelas = Kelas::find($request->id)->update($data);
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Mengubah Data');
     }
     
     public function delete($id)
     {
         Kelas::find($id)->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menghapus Data');
     }
        
 }

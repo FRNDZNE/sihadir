@@ -48,7 +48,7 @@ class MahasiswaController extends Controller
 
         $role = Role::where('name','mahasiswa')->first();
         $user->addRole($role);
-        return redirect()->route('admin.mahasiswa.index');
+        return redirect()->route('admin.mahasiswa.index')->with('success','Berhasil Menambah Data');
 
     }
 
@@ -83,13 +83,13 @@ class MahasiswaController extends Controller
         $mhs->foto = "Foto Sudah DI Edit";
         $mhs->save();
 
-        return redirect()->route('admin.mahasiswa.index');
+        return redirect()->route('admin.mahasiswa.index')->with('success','Berhasil Mengubah Data');
 
     }
 
     public function delete($id)
     {
         User::find($id)->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menghapus Data');
     }
 }
