@@ -23,9 +23,12 @@ class KelasController extends Controller
         return redirect()->back();
     }
     public function update(Request $request){
-        $data = Kelas::find( $request->id );
-        $data->name = $request->name;
-        $data->save();
+        // $data = Kelas::find( $request->id );
+        // $data->name = $request->name;
+        // $data->save();
+
+        $data = $request->all();
+        $kelas = Kelas::find($request->id)->update($data);
         return redirect()->back();
     }
     

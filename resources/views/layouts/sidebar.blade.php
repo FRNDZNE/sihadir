@@ -128,7 +128,7 @@
                         </li>
                         <li class="nav-header">DATA DOSEN</li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{ route('dosen.profil') }}" class="nav-link">
                                 <i class="nav-icon far fa-user"></i>
                                 <p>
                                     Profil
