@@ -10,6 +10,7 @@ use App\Models\Jadwal;
 use App\Models\Semester;
 use App\Models\Kelas;
 use App\Models\Day;
+use App\Models\Jam;
 use Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -29,6 +30,7 @@ class DashboardController extends Controller
             ->with(['kelas', 'ruang', 'day', 'jam', 'dosen', 'matkul', 'semester'])
             ->get();
 
+        // return $data;
         $counter = collect([]);
         if ($data->count() > 0) {
             $counter = Mahasiswa::select(['kelas_id', 'semester_id', DB::raw('count(*) as total')])

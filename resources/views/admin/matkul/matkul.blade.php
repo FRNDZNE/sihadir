@@ -9,7 +9,7 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTambah">
               <i class="fas fa-plus"></i> Tambah
             </button>
-            
+            <hr>
             <!-- Modal -->
             <div class="modal fade" id="modalTambah" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <table class="table">
+            <table id="tables" class="table">
                 <thead>
                     <tr>
                         <th>No</th>

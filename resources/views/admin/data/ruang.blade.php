@@ -36,7 +36,7 @@
                 </div>
             </div>
             <hr>
-            <table class="table">
+            <table id="tables" class="table">
                 <thead>
                     <tr>
                         <th>No</th>

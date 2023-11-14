@@ -47,12 +47,27 @@
                                                     </div>
                                                     <!-- /.description-block -->
                                                 </div>
+                                                @php
+                                                    $countJam = count($jadwal->jam);
+                                                    $jamAwal = $jadwal->jam[0];
+                                                    $jamAkhir = $jadwal->jam[$countJam - 1];
+                                                @endphp
                                                 <div class="col-sm-4">
                                                     <div class="description-block">
                                                         <h5 class="description-header">JAM</h5>
-                                                        <span class="description-text"></span>
+                                                        <span class="description-text">
+                                                            {{ $jamAwal->name }}
+                                                        </span>
+                                                        <span class="description-text">
+                                                            {{ $jamAkhir->name }}
+                                                        </span>
                                                     </div>
                                                     <!-- /.description-block -->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 border-right text-center">
+                                                    <a href="" class="btn btn-primary">Masuk</a>
                                                 </div>
                                             </div>
                                         </div>

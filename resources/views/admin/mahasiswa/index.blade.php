@@ -6,7 +6,7 @@
         <div class="card-body">
             <a href="{{ route('admin.mahasiswa.create') }}" class="btn btn-primary">Tambah</a>
             <hr>
-            <table class="table">
+            <table id="tables" class="table">
                 <thead>
                     <tr>
                         <th>No</th>

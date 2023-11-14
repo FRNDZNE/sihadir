@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header"><h5>Penjadwalan Semester {{ $semester->name }} Kelas {{ $kelas->name }}</h5></div>
         <div class="card-body">
-            <table class="table">
+            <table id="tables" class="table">
                 <thead>
                     <tr>
                         <th>No</th>
