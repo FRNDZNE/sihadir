@@ -4,6 +4,8 @@
     <div class="card">
         <div class="card-header"><h5>Penjadwalan Semester {{ $semester->name }}</h5></div>
         <div class="card-body">
+            <a href="{{ route('admin.penjadwalan.index', [$semester->id]) }}" class="btn btn-secondary">Kembali</a>
+            <hr>
             <table id="tables" class="table">
                 <thead>
                     <tr>

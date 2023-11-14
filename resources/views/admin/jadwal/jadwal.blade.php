@@ -4,6 +4,8 @@
     <div class="card">
         <div class="card-header"><h5>Penjadwalan Semester {{ $semester->name }} Kelas {{ $kelas->name }} Hari {{ $day->name }}</h5></div>
         <div class="card-body">
+            <a href="{{ route('admin.penjadwalan.kelas.index', [$semester->id,$kelas->id]) }}" class="btn btn-secondary">Kembali</a>
+            
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modelCreate">
               Tambah
