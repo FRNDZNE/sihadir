@@ -16,19 +16,14 @@ class JamController extends Controller
 
     }
     public function store(Request $request){
-        $data = new Jam;
-        $data->name = $request->name;
-        $data->save();
+        $data = $request->all();
+        Jam::create($data);
         return redirect()->back()->with('success','Berhasil Menambah Data');
 
     }
     public function update(Request $request){
-        // $data= Jam::find($request->id);
-        $data= Jam::where('id',$request->id)->first();
-
-        $data->update([
-            'name'=>$request->name,
-        ]);
+        $data= Jam::find($request->id);
+        $data->update($request->all());
         return redirect()->back()->with('success','Berhasil Mengubah Data');
     }
     public function delete($id){

@@ -19,20 +19,30 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                    <form action="{{route('admin.jam.store')}}" method="post">
+                        <form action="{{route('admin.jam.store')}}" method="post">
                         @csrf
                         <div class="modal-body">
-                            <div class="form-group">
-                                <label for="jam">Jam</label>
-                                <input type="text" name="name" id="jam" class="form-control" placeholder="Masukan Jam" aria-describedby="helpId">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="awal">Jam Mulai</label>
+                                        <input type="time" name="awal" id="awal" class="form-control" placeholder="Masukan Jam Mulai" aria-describedby="helpId">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="akhir">Jam Selesai</label>
+                                        <input type="time" name="akhir" id="akhir" class="form-control" placeholder="Masukan Jam Selesai" aria-describedby="helpId">
+                                    </div>
+                                </div>
                             </div>
-                            </div>
+                        </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                 <button type="submit" class="btn btn-primary">Simpan</button>
                             </div>
                         </div>
-                    </form>
+                        </form>
                 </div>
             </div>
             <hr>
@@ -40,15 +50,17 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>JAM</th>
-                        <th>OPSI</th>
+                        <th>Jam Mulai</th>
+                        <th>Jam Akhir</th>
+                        <th>Opsi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($jam as $j)
                     <tr>
                         <td>{{ $loop->iteration}}</td>
-                        <td>{{ $j->name}}</td>
+                        <td>{{ $j->awal}}</td>
+                        <td>{{ $j->akhir}}</td>
                         <td>
                             <!-- Button trigger modal  Edit-->
                             <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modaledit-{{$j->id}}">
@@ -68,11 +80,21 @@
                                         @csrf
                                         <div class="modal-body">
                                             <input type="hidden" name="id" value="{{$j->id}}">
-                                            <div class="form-group">
-                                                <label for="jam">Jam</label>
-                                                <input type="text" name="name" id="jam" value="{{$j->name}}" class="form-control" placeholder="Masukan jam" aria-describedby="helpId">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="awal">Jam Mulai</label>
+                                                        <input type="time" name="awal" id="awal" class="form-control" placeholder="Masukan Jam Mulai" aria-describedby="helpId" value="{{ $j->awal }}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="akhir">Jam Selesai</label>
+                                                        <input type="time" name="akhir" id="akhir" class="form-control" placeholder="Masukan Jam Selesai" aria-describedby="helpId" value="{{ $j->akhir }}">
+                                                    </div>
+                                                </div>
                                             </div>
-                                            </div>
+                                        </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                                 <button type="submit" class="btn btn-primary">Simpan</button>

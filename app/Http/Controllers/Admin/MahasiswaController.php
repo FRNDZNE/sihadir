@@ -43,7 +43,6 @@ class MahasiswaController extends Controller
         $mhs->angkatan_id = $request->angkatan;
         $mhs->semester_id = $request->semester;
         $mhs->gender = $request->gender;
-        $mhs->foto = "Foto Belum ADA";
         $mhs->save();
 
         $role = Role::where('name','mahasiswa')->first();
@@ -80,7 +79,6 @@ class MahasiswaController extends Controller
         $mhs->angkatan_id = $request->angkatan;
         $mhs->semester_id = $request->semester;
         $mhs->gender = $request->gender;
-        $mhs->foto = "Foto Sudah DI Edit";
         $mhs->save();
 
         return redirect()->route('admin.mahasiswa.index')->with('success','Berhasil Mengubah Data');

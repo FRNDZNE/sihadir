@@ -37,7 +37,6 @@ class DosenController extends Controller
         $dosen->user_id = $user->id;
         $dosen->nip = $request->nip;
         $dosen->gender = $request->gender;
-        $dosen->foto = "Foto Belum ada";
         $dosen->save();
 
         // Attach Role As Dosen
@@ -68,7 +67,6 @@ class DosenController extends Controller
         $dosen = Dosen::where('user_id',$id)->first();
         $dosen->nip = $request->nip;
         $dosen->gender = $request->gender;
-        $dosen->foto = 'Udah Berubah WKWKWWK';
         $dosen->save();
         return redirect()->route('admin.dosen.index')->with('success','Berhasil Mengubah Data');
     }
