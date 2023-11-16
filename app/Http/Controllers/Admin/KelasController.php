@@ -20,7 +20,7 @@ class KelasController extends Controller
         Kelas::create([
             'name' => $request->name,
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menambah Data');
     }
     public function update(Request $request){
         // $data = Kelas::find( $request->id );
