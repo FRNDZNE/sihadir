@@ -86,7 +86,7 @@ class JadwalController extends Controller
             $jadwal->jam()->attach($jam);
         }
 
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menambah Data');
 
     }
 
@@ -113,7 +113,7 @@ class JadwalController extends Controller
             $jadwal->jam()->attach($jam);
         }
 
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Mengubah Data');
         
     }
 
@@ -121,6 +121,6 @@ class JadwalController extends Controller
     {
         $jadwal = Jadwal::find($id)->delete();
         // return $jadwal;
-        return redirect()->back(); 
+        return redirect()->back()->with('success','Berhasil Menghapus Data');
     }
 }

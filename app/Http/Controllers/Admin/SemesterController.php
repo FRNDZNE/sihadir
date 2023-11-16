@@ -25,12 +25,12 @@ class SemesterController extends Controller
         $data = Semester::find( $request->id );
         $data->name = $request->name;
         $data->save();
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Mengubah Data');
     }
     
     public function delete($id)
     {
         Semester::find($id)->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menghapus Data');
     }
 }

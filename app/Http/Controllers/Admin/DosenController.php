@@ -44,7 +44,7 @@ class DosenController extends Controller
         $role = Role::where('name','dosen')->first();
         $user->addRole($role);
         // Return to index page
-        return redirect()->route('admin.dosen.index');
+        return redirect()->route('admin.dosen.index')->with('success','Berhasil Menambah Data');
     }
 
     public function edit($id)
@@ -70,12 +70,12 @@ class DosenController extends Controller
         $dosen->gender = $request->gender;
         $dosen->foto = 'Udah Berubah WKWKWWK';
         $dosen->save();
-        return redirect()->route('admin.dosen.index');
+        return redirect()->route('admin.dosen.index')->with('success','Berhasil Mengubah Data');
     }
 
     public function delete($id)
     {
         User::find($id)->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menghapus Data');
     }
 }

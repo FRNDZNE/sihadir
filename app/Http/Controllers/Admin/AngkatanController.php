@@ -19,18 +19,18 @@ class AngkatanController extends Controller
         Angkatan::create([
             'name' => $request->name,
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menambah Data');
     }
     public function update(Request $request){
         $data = Angkatan::find( $request->id );
         $data->name = $request->name;
         $data->save();
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Mengubah Data');
     }
 
     public function delete($id)
     {
         Angkatan::find($id)->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menghapus Data');
     }
 }
