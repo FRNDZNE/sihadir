@@ -38,4 +38,12 @@ class DosenController extends Controller
 
         return redirect()->back()->with('success','Berhasil Mengubah Data');
     }
+
+    public function jadwal($jadwal)
+    {
+        $jadwal = Jadwal::where('id',$jadwal)->with([
+            'kelas', 'ruang', 'day', 'jam', 'matkul', 'semester'
+        ])->first();
+        return view('dosen.jadwal',compact('jadwal'));
+    }
 }

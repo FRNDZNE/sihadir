@@ -64,7 +64,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 border-right text-center">
-                                        <a href="" class="btn btn-primary">Masuk</a>
+                                        <a href="{{ route('dosen.jadwal', $jadwal->id) }}" class="btn btn-primary">Masuk</a>
                                     </div>
                                 </div>
                             </div>

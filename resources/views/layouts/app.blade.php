@@ -80,7 +80,6 @@
       <!-- /.card -->
 
     </section>
-    <button class="btn btn-success swalDefaultSuccess" id="">Coba</button>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
@@ -125,7 +124,7 @@
     });
     Toast.fire({
         type: 'success',
-        title: ' {{Session::get('success')}}'
+        title: '{{Session::get('success')}}'
     });
   });
 </script>

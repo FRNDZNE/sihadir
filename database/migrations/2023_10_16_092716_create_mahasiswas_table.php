@@ -17,9 +17,8 @@ return new class extends Migration
             $table->foreignId('angkatan_id')->references('id')->on('angkatans')->onDelete('cascade');
             $table->foreignId('kelas_id')->references('id')->on('kelas')->onDelete('cascade');
             $table->foreignId('semester_id')->references('id')->on('semesters')->onDelete('cascade');
-            $table->string('nim');
+            $table->string('nim')->unique();
             $table->enum('gender',['pria','wanita']);
-            $table->string('foto');
             $table->timestamps();
         });
     }
