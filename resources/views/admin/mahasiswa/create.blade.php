@@ -42,22 +42,16 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" class="form-control">
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="password">Password</label>
                             <input type="password" name="password" id="password" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label for="foto">Foto</label>
-                            <input type="file" name="" id="" class="form-control-file" disabled>
                         </div>
                     </div>
                 </div>

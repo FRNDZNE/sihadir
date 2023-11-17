@@ -7,4 +7,6 @@ Route::middleware(['auth','role:dosen'])->prefix('dosen')->group(function(){
 
         // Jadwal & absensi
         Route::get('/jadwal/{jadwal}',[App\Http\Controllers\Dosen\DosenController::class,'jadwal'])->name('dosen.jadwal');
+        Route::get('/jadwal/{jadwal}/{minggu}',[App\Http\Controllers\Dosen\DosenController::class,'index_absensi'])->name('dosen.absensi');
+        Route::post('/absensi',[App\Http\Controllers\Dosen\DosenController::class,'store_absensi'])->name('dosen.absensi.store');
     });

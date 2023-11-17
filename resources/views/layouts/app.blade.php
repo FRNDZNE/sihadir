@@ -110,6 +110,7 @@
 <script>
   $(function () {
     $("#tables").DataTable();
+    $("#absensiTable").DataTable({"pageLength": 50});
   });
 </script>
 

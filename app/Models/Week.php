@@ -14,4 +14,5 @@ class Week extends Model
     {
         return $this->hasMany('App\Models\Absensi');
     }
+    
 }

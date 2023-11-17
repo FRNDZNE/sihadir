@@ -71,6 +71,14 @@
             Route::post('/delete/{id}',[App\Http\Controllers\Admin\DayController::class,'delete'])->name('admin.day.delete');
         });
 
+        // Route CRUD Week
+        Route::prefix('week')->group(function(){
+            Route::get('/',[App\Http\Controllers\Admin\WeekController::class,'index'])->name('admin.week.index');
+            Route::post('/store',[App\Http\Controllers\Admin\WeekController::class,'store'])->name('admin.week.store');
+            Route::post('/update',[App\Http\Controllers\Admin\WeekController::class,'update'])->name('admin.week.update');
+            Route::post('/delete/{id}',[App\Http\Controllers\Admin\WeekController::class,'destroy'])->name('admin.week.delete');
+        });
+
         // Route Mata Kuliah
         Route::prefix('matkul')->group(function(){
             Route::get('/',[App\Http\Controllers\Admin\MatkulController::class,'index'])->name('admin.matkul.index');

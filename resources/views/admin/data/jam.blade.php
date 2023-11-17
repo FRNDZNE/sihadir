@@ -26,13 +26,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="awal">Jam Mulai</label>
-                                        <input type="time" name="awal" id="awal" class="form-control" placeholder="Masukan Jam Mulai" aria-describedby="helpId">
+                                        <input type="text" name="awal" id="awal" class="form-control" placeholder="Masukan Jam Mulai" aria-describedby="helpId">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="akhir">Jam Selesai</label>
-                                        <input type="time" name="akhir" id="akhir" class="form-control" placeholder="Masukan Jam Selesai" aria-describedby="helpId">
+                                        <input type="text" name="akhir" id="akhir" class="form-control" placeholder="Masukan Jam Selesai" aria-describedby="helpId">
                                     </div>
                                 </div>
                             </div>
@@ -84,13 +84,13 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="awal">Jam Mulai</label>
-                                                        <input type="time" name="awal" id="awal" class="form-control" placeholder="Masukan Jam Mulai" aria-describedby="helpId" value="{{ $j->awal }}">
+                                                        <input type="text" name="awal" id="awal" class="form-control" placeholder="Masukan Jam Mulai" aria-describedby="helpId" value="{{ $j->awal }}">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="akhir">Jam Selesai</label>
-                                                        <input type="time" name="akhir" id="akhir" class="form-control" placeholder="Masukan Jam Selesai" aria-describedby="helpId" value="{{ $j->akhir }}">
+                                                        <input type="text" name="akhir" id="akhir" class="form-control" placeholder="Masukan Jam Selesai" aria-describedby="helpId" value="{{ $j->akhir }}">
                                                     </div>
                                                 </div>
                                             </div>

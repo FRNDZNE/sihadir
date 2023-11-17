@@ -14,4 +14,9 @@ class Absensi extends Model
     {
         return $this->belongsTo('App\Models\Week');
     }
+
+    public function jadwal()
+    {
+
+    }
 }

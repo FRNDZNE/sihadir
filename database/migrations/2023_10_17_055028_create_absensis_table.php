@@ -16,8 +16,9 @@ return new class extends Migration
             $table->foreignId('mahasiswa_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('jadwal_id')->references('id')->on('jadwals')->onDelete('cascade');
             $table->foreignId('week_id')->references('id')->on('weeks')->onDelete('cascade');
+            // $table->foreignId('jam_id')->references('id')->on('jam')->onDelete('cascade');
             $table->enum('status',['s','i','a','h']);
-            $table->date('tanggal');
+            // $table->date('tanggal'); // dihapus
             $table->timestamps();        
         });
     }

@@ -84,7 +84,7 @@
                                     <div class="col-md-3">
                                         <div class="form-check">
                                             <input type="checkbox" name="jam[]" id="jam-{{ $j->id }}" class="form-check-input" value="{{ $j->id }}">
-                                            <label for="jam-{{ $j->id }}" class="form-check-label">{{ $j->name }}</label>
+                                            <label for="jam-{{ $j->id }}" class="form-check-label">{{ $j->awal }} - {{ $j->akhir }}</label>
                                         </div>
                                     </div>
                                     @endforeach
@@ -198,7 +198,7 @@
                                                     <div class="col-md-3">
                                                         <div class="form-check">
                                                             <input type="checkbox" name="jam[]" id="jam-{{ $j->id }}" class="form-check-input" value="{{ $j->id }}" @if (in_array($j->id, $jadwalJam)) checked @endif>
-                                                            <label for="jam-{{ $j->id }}" class="form-check-label">{{ $j->name }}</label>
+                                                            <label for="jam-{{ $j->id }}" class="form-check-label">{{ $j->awal }} - {{ $j->akhir }}</label>
                                                         </div>
                                                     </div>
                                                     @endforeach

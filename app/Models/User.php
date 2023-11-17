@@ -57,5 +57,10 @@ class User extends Authenticatable implements LaratrustUser
         return $this->hasMany('App\Models\Jadwal');
     }
 
+    public function absensi()
+    {
+        return $this->hasMany(Absensi::class, 'mahasiswa_id');
+    }
+
     
 }

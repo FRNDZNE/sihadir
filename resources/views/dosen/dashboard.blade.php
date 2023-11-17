@@ -53,11 +53,9 @@
                                         <div class="description-block">
                                             <h5 class="description-header">JAM</h5>
                                             <span class="description-text">
-                                                {{ $jamAwal->name }}
+                                                {{ $jamAwal->awal }} - {{ $jamAkhir->akhir }}
                                             </span>
-                                            <span class="description-text">
-                                                {{ $jamAkhir->name }}
-                                            </span>
+                                            
                                         </div>
                                         <!-- /.description-block -->
                                     </div>

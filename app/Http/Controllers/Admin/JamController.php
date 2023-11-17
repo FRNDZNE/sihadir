@@ -22,7 +22,7 @@ class JamController extends Controller
 
     }
     public function update(Request $request){
-        $data= Jam::find($request->id);
+        $data = Jam::find($request->id);
         $data->update($request->all());
         return redirect()->back()->with('success','Berhasil Mengubah Data');
     }
