@@ -36,79 +36,81 @@
                         <li class="nav-header">DATA DOSEN</li>
                         <li class="nav-item">
                             <a href="{{ route('admin.dosen.index') }}" class="nav-link">
-                                <i class="nav-icon far fa-user"></i>
+                                <i class="nav-icon fas fa-user-tie"></i>
                                 <p>
                                     Dosen
                                 </p>
                             </a>
                         </li>
                         <li class="nav-header">CETAK</li>
-                            <li class="nav-item">
-                                <a href="{{ route('admin.cetak.index') }}" class="nav-link">
-                                    <i class="fas fa-file-signature"></i>
-                                    <p>Rekap Absensi</p>
-                                </a>
-                            </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.cetak.index') }}" class="nav-link">
+                                <i class="nav-icon fas fa-file-signature"></i>
+                                <p>
+                                    Rekap Absensi
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-header">DATA MAHASISWA</li>
                         <li class="nav-item">
                             <a href="{{ route('admin.mahasiswa.index') }}" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
+                                <i class="nav-icon fas fa-users"></i>
                                 <p>Mahasiswa</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('admin.kelas.index') }}" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
+                                <i class="nav-icon fas fa-spell-check"></i>
                                 <p>Kelas</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('admin.angkatan.index') }}" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
+                                <i class="nav-icon fas fa-chart-line"></i>
                                 <p>Angkatan</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('admin.semester.index') }}" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
+                                <i class="nav-icon fas fa-sort-numeric-up-alt"></i>
                                 <p>Semester</p>
                             </a>
                         </li>
                         <li class="nav-header">PENJADWALAN</li>
                         <li class="nav-item">
                             <a href="{{ route('admin.penjadwalan.index') }}" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>JADWAL</p>
+                                <i class="nav-icon fas fa-network-wired"></i>
+                                <p>Jadwal</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('admin.matkul.index') }}" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>MATA KULIAH</p>
+                                <i class="nav-icon fas fa-book-open"></i>
+                                <p>Mata Kuliah</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('admin.jam.index') }}" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>JAM</p>
+                                <i class="nav-icon fas fa-clock"></i>
+                                <p>Jam</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('admin.ruangan.index') }}" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>RUANGAN</p>
+                                <i class="nav-icon fas fa-door-open"></i>
+                                <p>Ruangan</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('admin.day.index') }}" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>HARI</p>
+                                <i class="nav-icon fas fa-calendar-day"></i>
+                                <p>Hari</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('admin.week.index') }}" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>MINGGU</p>
+                                <i class="nav-icon fas fa-calendar-week"></i>
+                                <p>Minggu</p>
                             </a>
                         </li>
                     </ul>
