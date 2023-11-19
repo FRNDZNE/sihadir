@@ -52,7 +52,7 @@
                                                 <div class="form-group">
                                                     <label for="dosen">Dosen Pengampu</label>
                                                     <select name="dosen" id="dosen" class="form-control">
-                                                        <option value="-">Pilih</option>
+                                                        <option value="0">Pilih</option>
                                                         @foreach ($dosen as $d)
                                                             <option value="{{ $d->id }}">{{ $d->name }}</option>
                                                         @endforeach
@@ -63,7 +63,7 @@
                                                 <div class="form-group">
                                                     <label for="matkul">Mata Kuliah</label>
                                                     <select name="matkul" id="matkul" class="form-control">
-                                                        <option value="-">Pilih</option>
+                                                        <option value="0">Pilih</option>
                                                         @foreach ($matkul as $mk)
                                                             <option value="{{ $mk->id }}">{{ $mk->name }}</option>
                                                         @endforeach
@@ -74,7 +74,7 @@
                                                 <div class="form-group">
                                                     <label for="ruang">Ruangan</label>
                                                     <select name="ruang" id="ruang" class="form-control">
-                                                        <option value="-">Pilih</option>
+                                                        <option value="0">Pilih</option>
                                                         @foreach ($ruang as $r)
                                                             <option value="{{ $r->id }}">{{ $r->name }}</option>
                                                         @endforeach
@@ -163,7 +163,7 @@
                                                                 <div class="form-group">
                                                                     <label for="dosen">Dosen Pengampu</label>
                                                                     <select name="dosen" id="dosen" class="form-control">
-                                                                        <option value="-">Pilih</option>
+                                                                        <option value="0">Pilih</option>
                                                                         @foreach ($dosen as $d)
                                                                             <option value="{{ $d->id }}" @if ($jdw->dosen_id == $d->id) selected @endif>{{ $d->name }}</option>
                                                                         @endforeach
@@ -174,7 +174,7 @@
                                                                 <div class="form-group">
                                                                     <label for="matkul">Mata Kuliah</label>
                                                                     <select name="matkul" id="matkul" class="form-control">
-                                                                        <option value="-">Pilih</option>
+                                                                        <option value="0">Pilih</option>
                                                                         @foreach ($matkul as $mk)
                                                                             <option value="{{ $mk->id }}" @if ($jdw->matkul_id == $mk->id) selected @endif>{{ $mk->name }}</option>
                                                                         @endforeach
@@ -185,7 +185,7 @@
                                                                 <div class="form-group">
                                                                     <label for="ruang">Ruangan</label>
                                                                     <select name="ruang" id="ruang" class="form-control">
-                                                                        <option value="-">Pilih</option>
+                                                                        <option value="0">Pilih</option>
                                                                         @foreach ($ruang as $r)
                                                                             <option value="{{ $r->id }}" @if ($jdw->ruang_id == $r->id) selected @endif>{{ $r->name }}</option>
                                                                         @endforeach

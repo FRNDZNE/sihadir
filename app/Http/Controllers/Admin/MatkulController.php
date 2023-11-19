@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Matkul;
 use App\Models\Semester;
+use Illuminate\Support\Facades\Validator;
 
 class MatkulController extends Controller
 {
@@ -27,6 +28,12 @@ class MatkulController extends Controller
 
     public function store(Request $request, $id)
     {
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+        ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
         $semester = Semester::where('id',$id)->first();
         $matkul = new Matkul;
         $matkul->semester_id = $semester->id;
@@ -37,6 +44,12 @@ class MatkulController extends Controller
 
     public function update(Request $request, $id)
     {
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+        ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
         $semester = Semester::where('id',$id)->first();
         $matkul = Matkul::where('semester_id',$id)->first();
         $matkul->name = $request->name;
