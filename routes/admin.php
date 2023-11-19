@@ -106,4 +106,5 @@
             Route::get('/{semester}/{kelas}',[App\Http\Controllers\Admin\CetakController::class,'index_minggu'])->name('admin.cetak.index.minggu');
         });
 
+        Route::get('/test-cetak',[App\Http\Controllers\Admin\CetakController::class,'testCetak'])->name('cetak');
     });

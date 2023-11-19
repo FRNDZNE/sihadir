@@ -27,8 +27,14 @@ class CetakController extends Controller
     public function index_minggu($smt,$kls)
     {
         $data['semester'] = Semester::where('id',$smt)->first();
-        $data['kelas'] = Kelas::all();
+        $data['kelas'] = Kelas::where('id',$kls)->first();
         $data['week'] = Week::all();
         return view('admin.cetak.minggu',compact('data'));
+    }
+
+    public function testCetak()
+    {
+        $pdf = PDF::loadView('admin.cetak.test')->setPaper('a4','portrait');
+        return $pdf->stream();
     }
 }

@@ -113,6 +113,12 @@
                                 <p>Minggu</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('cetak') }}" class="nav-link">
+                                <i class="nav-icon fas fa-calendar-week"></i>
+                                <p>Test Cetak</p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

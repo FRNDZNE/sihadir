@@ -20,7 +20,7 @@
                             @foreach($data['kelas'] as $k)
                             <tr>
                                 <td>{{ $loop->iteration}}</td>
-                                <td><a href="">{{ $k->name}}</a></td>
+                                <td><a href="{{ route('admin.cetak.index.minggu',[$data['semester']->id,$k->id]) }}">{{ $k->name}}</a></td>
                             </tr>
                             @endforeach
                         </tbody>
