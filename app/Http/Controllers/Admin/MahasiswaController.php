@@ -10,7 +10,7 @@ use App\Models\Kelas;
 use App\Models\Semester;
 use App\Models\Angkatan;
 use App\Models\Role;
-
+use Illuminate\Support\Facades\Validator;
 
 class MahasiswaController extends Controller
 {
@@ -30,6 +30,38 @@ class MahasiswaController extends Controller
 
     public function store(Request $request)
     {
+        // $user = new User;
+        // $user->name = $request->name;
+        // $user->email = $request->email;
+        // $user->password = bcrypt($request->password);
+        // $user->save();
+
+        // $mhs = new Mahasiswa;
+        // $mhs->user_id = $user->id;
+        // $mhs->nim = $request->nim;
+        // $mhs->kelas_id = $request->kelas;
+        // $mhs->angkatan_id = $request->angkatan;
+        // $mhs->semester_id = $request->semester;
+        // $mhs->gender = $request->gender;
+        // $mhs->save();
+
+        // $role = Role::where('name','mahasiswa')->first();
+        // $user->addRole($role);
+        // return redirect()->route('admin.mahasiswa.index')->with('success','Berhasil Menambah Data');
+
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+            'email'=> 'required',
+            'password'=> 'required',
+            'nim'=> 'required',
+            'kelas'=> 'required',
+            'angkatan'=> 'required',
+            'semester'=> 'required',
+            'gender'=> 'required',
+        ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
         $user = new User;
         $user->name = $request->name;
         $user->email = $request->email;
@@ -48,7 +80,6 @@ class MahasiswaController extends Controller
         $role = Role::where('name','mahasiswa')->first();
         $user->addRole($role);
         return redirect()->route('admin.mahasiswa.index')->with('success','Berhasil Menambah Data');
-
     }
 
     public function edit($id)

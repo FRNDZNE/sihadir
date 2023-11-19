@@ -23,11 +23,9 @@ class WeekController extends Controller
         // ]);
         $validate = Validator::make($request->all(), [
             'name' => 'required',
-        ],[
-            'required' => 'Masukan Data Terlebih Dahulu',
         ]);
         if($validate->fails()){
-            return back()->withErrors($validate->errors())->withInput();
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
         }
         $data = $request->all();
         Week::create($data);

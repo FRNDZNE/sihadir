@@ -13,6 +13,7 @@ use App\Models\Jadwal;
 use App\Models\User;
 use App\Models\Ruang;
 use Illuminate\Support\Facades\Url;
+use Illuminate\Support\Facades\Validator;
 
 class JadwalController extends Controller
 {
@@ -69,6 +70,34 @@ class JadwalController extends Controller
 
     public function store_jadwal(Request $request, $smt, $kls, $day)
     {
+        // $semester = Semester::where('id',$smt)->first();
+        // $kelas = Kelas::where('id',$kls)->first();
+        // $day = Day::where('id',$day)->first();
+
+        // $jadwal = new Jadwal;
+        // $jadwal->semester_id = $semester->id;
+        // $jadwal->kelas_id = $kelas->id;
+        // $jadwal->ruang_id = $request->ruang;
+        // $jadwal->dosen_id = $request->dosen;
+        // $jadwal->day_id = $day->id;
+        // $jadwal->matkul_id = $request->matkul;
+        // $jadwal->save();
+
+        // foreach ($request->jam as $jam) {
+        //     $jadwal->jam()->attach($jam);
+        // }
+
+        // return redirect()->back()->with('success','Berhasil Menambah Data');
+
+        $validate = Validator::make($request->all(), [
+            'ruang' => 'required|min:0|not_in:0',
+            'dosen' => 'required|min:0|not_in:0',
+            'matkul' => 'required|min:0|not_in:0',
+            'jam' => 'required|min:0|not_in:0',
+        ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
         $semester = Semester::where('id',$smt)->first();
         $kelas = Kelas::where('id',$kls)->first();
         $day = Day::where('id',$day)->first();
@@ -87,7 +116,6 @@ class JadwalController extends Controller
         }
 
         return redirect()->back()->with('success','Berhasil Menambah Data');
-
     }
 
     public function update_jadwal(Request $request, $smt, $kls, $day)

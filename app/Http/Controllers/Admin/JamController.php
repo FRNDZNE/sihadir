@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Jam;
+use Illuminate\Support\Facades\Validator;
 
 class JamController extends Controller
 {
@@ -16,10 +17,20 @@ class JamController extends Controller
 
     }
     public function store(Request $request){
+        // $data = $request->all();
+        // Jam::create($data);
+        // return redirect()->back()->with('success','Berhasil Menambah Data');
+
+        $validate = Validator::make($request->all(), [
+            'awal' => 'required',
+            'akhir' => 'required',
+        ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
         $data = $request->all();
         Jam::create($data);
         return redirect()->back()->with('success','Berhasil Menambah Data');
-
     }
     public function update(Request $request){
         $data = Jam::find($request->id);

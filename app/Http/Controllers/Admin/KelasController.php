@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Kelas;
+use Illuminate\Support\Facades\Validator;
 
 class KelasController extends Controller
 
@@ -17,9 +18,19 @@ class KelasController extends Controller
     }
     public function store(Request $request)
     {
-        Kelas::create([
-            'name' => $request->name,
+        // Kelas::create([
+        //     'name' => $request->name,
+        // ]);
+        // return redirect()->back()->with('success','Berhasil Menambah Data');
+
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
         ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
+        $data = $request->all();
+        Kelas::create($data);
         return redirect()->back()->with('success','Berhasil Menambah Data');
     }
     public function update(Request $request){

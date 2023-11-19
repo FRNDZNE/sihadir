@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Angkatan;
+use Illuminate\Support\Facades\Validator;
 
 class AngkatanController extends Controller
 {
@@ -16,9 +17,19 @@ class AngkatanController extends Controller
     }
     public function store(Request $request)
     {
-        Angkatan::create([
-            'name' => $request->name,
+        // Angkatan::create([
+        //     'name' => $request->name,
+        // ]);
+        // return redirect()->back()->with('success','Berhasil Menambah Data');
+
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
         ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
+        $data = $request->all();
+        Angkatan::create($data);
         return redirect()->back()->with('success','Berhasil Menambah Data');
     }
     public function update(Request $request){
