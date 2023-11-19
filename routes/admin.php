@@ -102,6 +102,8 @@
 
         Route::prefix('cetak')->group(function(){
             Route::get('/',[App\Http\Controllers\Admin\CetakController::class,'index'])->name('admin.cetak.index');
+            Route::get('/{semester}',[App\Http\Controllers\Admin\CetakController::class,'index_kelas'])->name('admin.cetak.index.kelas');
+            Route::get('/{semester}/{kelas}',[App\Http\Controllers\Admin\CetakController::class,'index_minggu'])->name('admin.cetak.index.minggu');
         });
 
     });
