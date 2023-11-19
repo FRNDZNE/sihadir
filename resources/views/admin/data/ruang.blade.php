@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header"><h5>Data Ruang</h5></div>
+                <div class="card-header"><h5>Data Ruangan</h5></div>
                 <div class="card-body">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modalcreate">
@@ -17,7 +17,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header bg-primary">
-                                    <h5 class="modal-title"> Tambah Ruang</h5>
+                                    <h5 class="modal-title"> Tambah Ruangan</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -26,8 +26,8 @@
                                 @csrf
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <label for="ruang">Ruang</label>
-                                        <input type="text" name="name" id="ruang" class="form-control" placeholder="Masukan Ruang" aria-describedby="helpId">
+                                        <label for="ruang">Ruangan</label>
+                                        <input type="text" name="name" id="ruang" class="form-control" placeholder="Masukkan Ruangan" aria-describedby="helpId">
                                     </div>
                                     </div>
                                     <div class="modal-footer">
@@ -42,8 +42,8 @@
                     <table id="tables" class="table">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Ruang</th>
+                                <th>NO</th>
+                                <th>RUANGAN</th>
                                 <th>OPSI</th>
                             </tr>
                         </thead>
@@ -61,8 +61,8 @@
                                     <div class="modal fade" id="modaledit-{{$k->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
-                                                <div class="modal-header bg-primary">
-                                                    <h5 class="modal-title"> Tambah Ruang</h5>
+                                                <div class="modal-header bg-warning">
+                                                    <h5 class="modal-title"> Edit Ruangan</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -72,13 +72,13 @@
                                                 <div class="modal-body">
                                                     <input type="hidden" name="id" value="{{$k->id}}">
                                                     <div class="form-group">
-                                                        <label for="ruang">Ruang</label>
-                                                        <input type="text" name="name" id="ruang" value="{{$k->name}}" class="form-control" placeholder="Masukan Ruang" aria-describedby="helpId">
+                                                        <label for="ruang">Ruangan</label>
+                                                        <input type="text" name="name" id="ruang" value="{{$k->name}}" class="form-control" placeholder="Masukkan Ruangan" aria-describedby="helpId">
                                                     </div>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                                        <button type="submit" class="btn btn-warning">Update</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -92,21 +92,21 @@
                                         <div class="modal fade" id="modaldelete-{{$k->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
-                                                    <div class="modal-header bg-primary">
-                                                        <h5 class="modal-title"> Hapus Ruang</h5>
+                                                    <div class="modal-header bg-danger">
+                                                        <h5 class="modal-title"> Hapus Ruangan</h5>
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
                                                 
                                                     <div class="modal-body">
-                                                        Apakah ingin menghapus kelas {{$k->name}}
+                                                        Apakah ingin menghapus ruangan {{$k->name}} ?
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                                             <form action="{{route('admin.ruangan.delete',$k->id)}}" method="post">
                                                             @csrf
-                                                            <button type="submit" class="btn btn-danger">Simpan</button>
+                                                            <button type="submit" class="btn btn-danger">Hapus</button>
                                                             </form>
                                                         </div>
                                                     </div>

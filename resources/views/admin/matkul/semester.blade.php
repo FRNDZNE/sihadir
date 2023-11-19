@@ -10,8 +10,8 @@
                     <table id="tables" class="table">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Semester</th>
+                                <th>NO</th>
+                                <th>SEMESTER</th>
                             </tr>
                         </thead>
                         <tbody>

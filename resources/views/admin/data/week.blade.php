@@ -27,7 +27,7 @@
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label for="minggu">Minggu</label>
-                                        <input type="text" name="name" id="minggu" class="form-control" placeholder="Masukan minggu" aria-describedby="helpId">
+                                        <input type="text" name="name" id="minggu" class="form-control" placeholder="Masukkan Minggu" aria-describedby="helpId">
                                     </div>
                                     </div>
                                     <div class="modal-footer">
@@ -42,8 +42,8 @@
                     <table id="tables" class="table">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Minggu</th>
+                                <th>NO</th>
+                                <th>MINGGU</th>
                                 <th>OPSI</th>
                             </tr>
                         </thead>
@@ -62,7 +62,7 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header bg-warning">
-                                                    <h5 class="modal-title"> Tambah Minggu</h5>
+                                                    <h5 class="modal-title"> Edit Minggu</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -73,12 +73,12 @@
                                                         <input type="hidden" name="id" value="{{$w->id}}">
                                                         <div class="form-group">
                                                             <label for="minggu">Minggu</label>
-                                                            <input type="text" name="name" id="minggu" value="{{$w->name}}" class="form-control" placeholder="Masukan minggu" aria-describedby="helpId">
+                                                            <input type="text" name="name" id="minggu" value="{{$w->name}}" class="form-control" placeholder="Masukkan Minggu" aria-describedby="helpId">
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                        <button type="submit" class="btn btn-warning">Simpan</button>
+                                                        <button type="submit" class="btn btn-warning">Update</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -100,10 +100,10 @@
                                                         </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Ingin menghapus minggu {{$w->name}} ?
+                                                    Apakah ingin menghapus {{$w->name}} ?
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                                     <form action="{{route('admin.week.delete',$w->id)}}" method="post">
                                                         @csrf
                                                         <button type="submit" class="btn btn-danger">Hapus</button>

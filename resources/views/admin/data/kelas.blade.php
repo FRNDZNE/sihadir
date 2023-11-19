@@ -17,7 +17,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header bg-primary">
-                                    <h5 class="modal-title"> Tambah Kelas</h5>
+                                    <h5 class="modal-title"> Tambah Data Kelas</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -27,7 +27,7 @@
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label for="kelas">Kelas</label>
-                                        <input type="text" name="name" id="kelas" class="form-control" placeholder="Masukan Kelas" aria-describedby="helpId">
+                                        <input type="text" name="name" id="kelas" class="form-control" placeholder="Masukkan Kelas" aria-describedby="helpId">
                                     </div>
                                     </div>
                                     <div class="modal-footer">
@@ -42,7 +42,7 @@
                     <table id="tables" class="table">
                         <thead>
                             <tr>
-                                <th>No</th>
+                                <th>NO</th>
                                 <th>KELAS</th>
                                 <th>OPSI</th>
                             </tr>
@@ -62,7 +62,7 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header bg-warning">
-                                                    <h5 class="modal-title"> Tambah Kelas</h5>
+                                                    <h5 class="modal-title"> Edit Data Kelas</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -73,12 +73,12 @@
                                                         <input type="hidden" name="id" value="{{$k->id}}">
                                                         <div class="form-group">
                                                             <label for="kelas">Kelas</label>
-                                                            <input type="text" name="name" id="kelas" value="{{$k->name}}" class="form-control" placeholder="Masukan Kelas" aria-describedby="helpId">
+                                                            <input type="text" name="name" id="kelas" value="{{$k->name}}" class="form-control" placeholder="Masukkan Kelas" aria-describedby="helpId">
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                        <button type="submit" class="btn btn-warning">Simpan</button>
+                                                        <button type="submit" class="btn btn-warning">Update</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -100,10 +100,10 @@
                                                         </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Ingin menghapus kelas {{$k->name}} ?
+                                                    Apakah ingin menghapus kelas {{$k->name}} ?
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                                     <form action="{{route('admin.kelas.delete',$k->id)}}" method="post">
                                                         @csrf
                                                         <button type="submit" class="btn btn-danger">Hapus</button>

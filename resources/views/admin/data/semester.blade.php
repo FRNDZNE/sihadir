@@ -17,7 +17,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header bg-primary">
-                                    <h5 class="modal-title"> Tambah Semester</h5>
+                                    <h5 class="modal-title"> Tambah Data Semester</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -27,7 +27,7 @@
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label for="semester">Semester</label>
-                                        <input type="text" name="name" id="semester" class="form-control" placeholder="Masukan semester" aria-describedby="helpId">
+                                        <input type="text" name="name" id="semester" class="form-control" placeholder="Masukkan Semester" aria-describedby="helpId">
                                     </div>
                                     </div>
                                     <div class="modal-footer">
@@ -42,8 +42,8 @@
                     <table id="tables" class="table">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Semester</th>
+                                <th>NO</th>
+                                <th>SEMESTER</th>
                                 <th>OPSI</th>
                             </tr>
                         </thead>
@@ -62,7 +62,7 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header bg-warning">
-                                                    <h5 class="modal-title"> Tambah semester</h5>
+                                                    <h5 class="modal-title"> Edit Data Semester</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -72,13 +72,13 @@
                                                     <div class="modal-body">
                                                         <input type="hidden" name="id" value="{{$k->id}}">
                                                         <div class="form-group">
-                                                            <label for="semester">semester</label>
-                                                            <input type="text" name="name" id="semester" value="{{$k->name}}" class="form-control" placeholder="Masukan semester" aria-describedby="helpId">
+                                                            <label for="semester">Semester</label>
+                                                            <input type="text" name="name" id="semester" value="{{$k->name}}" class="form-control" placeholder="Masukkan Semester" aria-describedby="helpId">
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                        <button type="submit" class="btn btn-warning">Simpan</button>
+                                                        <button type="submit" class="btn btn-warning">Update</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -94,16 +94,16 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header bg-danger">
-                                                    <h5 class="modal-title">Hapus semester</h5>
+                                                    <h5 class="modal-title">Hapus Semester</h5>
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Ingin menghapus semester {{$k->name}} ?
+                                                    Apakah ingin menghapus semester {{$k->name}} ?
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                                     <form action="{{route('admin.semester.delete',$k->id)}}" method="post">
                                                         @csrf
                                                         <button type="submit" class="btn btn-danger">Hapus</button>

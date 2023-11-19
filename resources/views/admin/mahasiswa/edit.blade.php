@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header bg-warning"><h5>Edit Data Mahasiswa</h5></div>
+                <div class="card-header bg-warning"><h5>Edit Mahasiswa</h5></div>
                 <form action="{{ route('admin.mahasiswa.update', $data['user']->id) }}" method="post" enctype="multipart/form-data">
                     <div class="card-body">
                         @csrf
@@ -13,13 +13,13 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="nim">NIM</label>
-                                    <input type="text" name="nim" id="nim" class="form-control" value="{{ $data['user']->mahasiswa->nim }}">
+                                    <input type="text" name="nim" id="nim" class="form-control" value="{{ $data['user']->mahasiswa->nim }}" placeholder="Masukkan NIM">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="nama">Nama</label>
-                                    <input type="text" name="name" id="nama" class="form-control" value="{{ $data['user']->name }}">
+                                    <input type="text" name="name" id="nama" class="form-control" value="{{ $data['user']->name }}" placeholder="Masukkan Nama">
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -48,7 +48,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" class="form-control" value="{{ $data['user']->email }}">
+                                    <input type="email" name="email" id="email" class="form-control" value="{{ $data['user']->email }}" placeholder="Masukkan Email">
                                 </div>
                             </div>
                             <div class="col-md-6">

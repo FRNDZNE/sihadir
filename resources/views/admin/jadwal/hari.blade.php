@@ -12,7 +12,7 @@
                     <table id="tables" class="table">
                         <thead>
                             <tr>
-                                <th>No</th>
+                                <th>NO</th>
                                 <th>HARI</th>
                             </tr>
                         </thead>
