@@ -45,24 +45,17 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="email">Email</label>
                                     <input type="email" name="email" id="email" class="form-control" value="{{ $data['user']->email }}">
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="password">Password</label>
                                     <input type="password" name="password" id="password" class="form-control">
                                     <small>Abaikan jika tidak ingin mengganti password</small>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="foto">Foto</label>
-                                    <input type="file" name="" id="" class="form-control-file" disabled>
-                                    <small>Abaikan jika tidak ingin mengubah foto</small>
                                 </div>
                             </div>
                         </div>

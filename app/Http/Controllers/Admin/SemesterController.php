@@ -17,11 +17,6 @@ class SemesterController extends Controller
     }
     public function store(Request $request)
     {
-        // Semester::create([
-        //     'name' => $request->name,
-        // ]);
-        // return redirect()->back()->with('success','Berhasil Menambah Data');
-        
         $validate = Validator::make($request->all(), [
             'name' => 'required',
         ]);
@@ -33,6 +28,12 @@ class SemesterController extends Controller
         return redirect()->back()->with('success','Berhasil Menambah Data');
     }
     public function update(Request $request){
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+        ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
         $data = Semester::find( $request->id );
         $data->name = $request->name;
         $data->save();

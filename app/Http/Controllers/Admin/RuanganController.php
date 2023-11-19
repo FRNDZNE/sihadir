@@ -16,11 +16,6 @@ class RuanganController extends Controller
         return view('admin.data.ruang', compact('data'));
     }
     public function store(Request $request){
-        // $data = new Ruang;
-        // $data->name = $request->name;
-        // $data->save();
-        // return redirect()->back()->with('success','Berhasil Menambah Data');
-
         $validate = Validator::make($request->all(), [
             'name' => 'required',
         ]);
@@ -32,8 +27,12 @@ class RuanganController extends Controller
         return redirect()->back()->with('success','Berhasil Menambah Data');
     }
     public function update(Request $request){
-        
-        // $data = Ruang::where('id',$request->id)->first();
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+        ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
         $data = Ruang::find($request->id);
 
         $data->update([

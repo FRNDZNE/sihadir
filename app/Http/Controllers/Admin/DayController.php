@@ -17,11 +17,6 @@ class DayController extends Controller
 
     }
     public function store(Request $request){
-        // $data = new Day;
-        // $data->name = $request->name;
-        // $data->save();
-        // return redirect()->back()->with('success','Berhasil Menambah Data');
-
         $validate = Validator::make($request->all(), [
             'name' => 'required',
         ]);
@@ -33,6 +28,12 @@ class DayController extends Controller
         return redirect()->back()->with('success','Berhasil Menambah Data');
     }
     public function update(Request $request){
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+        ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
         $data= Day::where('id',$request->id)->first();
 
         $data->update([

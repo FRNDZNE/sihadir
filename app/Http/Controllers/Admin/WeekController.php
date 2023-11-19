@@ -18,9 +18,6 @@ class WeekController extends Controller
 
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'name' => 'required',
-        // ]);
         $validate = Validator::make($request->all(), [
             'name' => 'required',
         ]);
@@ -34,6 +31,12 @@ class WeekController extends Controller
 
     public function update(Request $request)
     {
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+        ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
         $data = Week::find($request->id);
         $data->update($request->all());
         return redirect()->back()->with('success','Berhasil Mengubah Data');

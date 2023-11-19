@@ -33,6 +33,12 @@ class AngkatanController extends Controller
         return redirect()->back()->with('success','Berhasil Menambah Data');
     }
     public function update(Request $request){
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+        ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
         $data = Angkatan::find( $request->id );
         $data->name = $request->name;
         $data->save();

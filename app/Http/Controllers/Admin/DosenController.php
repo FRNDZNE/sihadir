@@ -25,26 +25,6 @@ class DosenController extends Controller
     
     public function store(Request $request)
     {
-        // // Create table User
-        // $user = new User;
-        // $user->name = $request->name;
-        // $user->email = $request->email;
-        // $user->password = bcrypt($request->password);
-        // $user->save();
-
-        // // Create table Dosen
-        // $dosen = new Dosen;
-        // $dosen->user_id = $user->id;
-        // $dosen->nip = $request->nip;
-        // $dosen->gender = $request->gender;
-        // $dosen->save();
-
-        // // Attach Role As Dosen
-        // $role = Role::where('name','dosen')->first();
-        // $user->addRole($role);
-        // // Return to index page
-        // return redirect()->route('admin.dosen.index')->with('success','Berhasil Menambah Data');
-
         $validate = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required',
@@ -84,6 +64,15 @@ class DosenController extends Controller
 
     public function update(Request $request, $id)
     {
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+            'email' => 'required',
+            'nip' => 'required',
+            'gender' => 'required',
+        ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
         $user = User::where('id',$id)->first();
         $user->name = $request->name;
         $user->email = $request->email;

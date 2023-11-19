@@ -28,13 +28,6 @@ class MatkulController extends Controller
 
     public function store(Request $request, $id)
     {
-        // $semester = Semester::where('id',$id)->first();
-        // $matkul = new Matkul;
-        // $matkul->semester_id = $semester->id;
-        // $matkul->name = $request->name;
-        // $matkul->save();
-        // return redirect()->back()->with('success','Berhasil Menambah Data');
-
         $validate = Validator::make($request->all(), [
             'name' => 'required',
         ]);
@@ -51,6 +44,12 @@ class MatkulController extends Controller
 
     public function update(Request $request, $id)
     {
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+        ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
         $semester = Semester::where('id',$id)->first();
         $matkul = Matkul::where('semester_id',$id)->first();
         $matkul->name = $request->name;

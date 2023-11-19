@@ -30,25 +30,6 @@ class MahasiswaController extends Controller
 
     public function store(Request $request)
     {
-        // $user = new User;
-        // $user->name = $request->name;
-        // $user->email = $request->email;
-        // $user->password = bcrypt($request->password);
-        // $user->save();
-
-        // $mhs = new Mahasiswa;
-        // $mhs->user_id = $user->id;
-        // $mhs->nim = $request->nim;
-        // $mhs->kelas_id = $request->kelas;
-        // $mhs->angkatan_id = $request->angkatan;
-        // $mhs->semester_id = $request->semester;
-        // $mhs->gender = $request->gender;
-        // $mhs->save();
-
-        // $role = Role::where('name','mahasiswa')->first();
-        // $user->addRole($role);
-        // return redirect()->route('admin.mahasiswa.index')->with('success','Berhasil Menambah Data');
-
         $validate = Validator::make($request->all(), [
             'name' => 'required',
             'email'=> 'required',
@@ -94,6 +75,18 @@ class MahasiswaController extends Controller
 
     public function update(Request $request, $id)
     {
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+            'email'=> 'required',
+            'nim'=> 'required',
+            'kelas'=> 'required',
+            'angkatan'=> 'required',
+            'semester'=> 'required',
+            'gender'=> 'required',
+        ]);
+        if($validate->fails()){
+            return redirect()->back()->with('errors','Masukan Data Terlebih Dahulu');
+        }
         $user = User::where('id',$id)->first();
         $user->name = $request->name;
         $user->email = $request->email;
