@@ -143,7 +143,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('dosen.dashboard') }}" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <i class="nav-icon fas fa-calendar-check"></i>
                                 <p>
                                     Absensi
                                 </p>
@@ -152,7 +152,7 @@
                         <li class="nav-header">DATA DOSEN</li>
                         <li class="nav-item">
                             <a href="{{ route('dosen.profil') }}" class="nav-link">
-                                <i class="nav-icon far fa-user"></i>
+                                <i class="nav-icon fas fa-user"></i>
                                 <p>
                                     Profil
                                 </p>
@@ -188,7 +188,7 @@
                         <li class="nav-header">DATA MAHASISWA</li>
                         <li class="nav-item">
                             <a href="{{ route('mahasiswa.profil') }}" class="nav-link">
-                                <i class="nav-icon far fa-user"></i>
+                                <i class="nav-icon fas fa-user"></i>
                                 <p>
                                     Profil
                                 </p>
