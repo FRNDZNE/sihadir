@@ -11,6 +11,8 @@ use App\Models\Semester;
 use App\Models\Kelas;
 use App\Models\Day;
 use App\Models\Jam;
+use App\Models\Ruang;
+use App\Models\Matkul;
 use Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -22,7 +24,11 @@ class DashboardController extends Controller
     }
     public function admin()
     {
-        return view('admin.dashboard');
+        $data['ruang'] = Ruang::all();
+        $data['dosen'] = Dosen::all();
+        $data['mahasiswa'] = Mahasiswa::all();
+        $data['matkul'] = Matkul::all();
+        return view('admin.dashboard',compact('data'));
     }
     public function dosen(Request $request)
     {

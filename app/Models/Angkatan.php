@@ -13,6 +13,6 @@ class Angkatan extends Model
 
     public function mahasiswa()
     {
-        return $this->belongsToMany('App\Models\Mahasiswa');
+        return $this->belongsTo('App\Models\Mahasiswa');
     }
 }

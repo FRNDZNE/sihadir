@@ -17,6 +17,6 @@ class Absensi extends Model
 
     public function jadwal()
     {
-
+        return $this->belongsTo(Jadwal::class);
     }
 }

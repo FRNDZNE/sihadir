@@ -85,7 +85,7 @@
   <!-- /.content-wrapper -->
 
   <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
+    <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 0.1 Beta
     </div>
     <strong>Copyright &copy; 2023 <a href="{{url('/')}}">SIHADIR</a>.</strong> All rights
@@ -107,6 +107,15 @@
 <!-- DataTables -->
 <script src="{{ asset('/') }}/template/plugins/datatables/jquery.dataTables.js"></script>
 <script src="{{ asset('/') }}/template/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+<!-- OPTIONAL SCRIPTS -->
+<script src="{{ asset('/') }}/template/dist/js/demo.js"></script>
+<!-- jQuery Mapael -->
+<script src="{{ asset('/') }}/template/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="{{ asset('/') }}/template/plugins/raphael/raphael.min.js"></script>
+<script src="{{ asset('/') }}/template/plugins/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="{{ asset('/') }}/template/plugins/jquery-mapael/maps/usa_states.min.js"></script>
+<!-- PAGE SCRIPTS -->
+<script src="{{ asset('/') }}/template/dist/js/pages/dashboard2.js"></script>
 <script>
   $(function () {
     $("#tables").DataTable();
@@ -114,7 +123,6 @@
   });
 </script>
 
-@if (Session::has('success'))
   <script type="text/javascript">
   $(function() {
     const Toast = Swal.mixin({
@@ -123,12 +131,18 @@
       showConfirmButton: false,
       timer: 3000
     });
+    @if (Session::has('success'))
     Toast.fire({
         type: 'success',
         title: '{{Session::get('success')}}'
     });
+    @elseif (Session::has('errors'))
+    Toast.fire({
+        type: 'error',
+        title: '{{Session::get('errors')}}'
+    });
+    @endif
   });
 </script>
-@endif
 </body>
 </html>

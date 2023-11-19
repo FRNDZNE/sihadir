@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Week;
+use Illuminate\Support\Facades\Validator;
+
 
 class WeekController extends Controller
 {
@@ -16,6 +18,17 @@ class WeekController extends Controller
 
     public function store(Request $request)
     {
+        // $request->validate([
+        //     'name' => 'required',
+        // ]);
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+        ],[
+            'required' => 'Masukan Data Terlebih Dahulu',
+        ]);
+        if($validate->fails()){
+            return back()->withErrors($validate->errors())->withInput();
+        }
         $data = $request->all();
         Week::create($data);
         return redirect()->back()->with('success','Berhasil Menambah Data');

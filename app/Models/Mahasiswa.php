@@ -18,7 +18,7 @@ class Mahasiswa extends Model
 
     public function angkatan()
     {
-        return $this->hasOne('App\Models\Angkatan');
+        return $this->belongsTo('App\Models\Angkatan');
     }
     public function kelas()
     {
