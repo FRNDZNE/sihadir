@@ -13,7 +13,6 @@ class MahasiswaController extends Controller
     public function profil()
     {
         $data = User::with('mahasiswa')->where('id', Auth::user()->id)->first();
-        // return $data;
         return view('mahasiswa.profil',compact('data'));
     }
 

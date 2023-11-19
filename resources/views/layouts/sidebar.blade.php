@@ -42,10 +42,10 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-header">Cetak</li>
+                        <li class="nav-header">CETAK</li>
                             <li class="nav-item">
-                                <a href="{{ route('test') }}" class="nav-link">
-                                    <i class="nav-icon fas fa-file"></i>
+                                <a href="{{ route('admin.cetak.index') }}" class="nav-link">
+                                    <i class="fas fa-file-signature"></i>
                                     <p>Rekap Absensi</p>
                                 </a>
                             </li>

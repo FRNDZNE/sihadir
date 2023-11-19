@@ -100,6 +100,8 @@
             Route::post('/{smt}/{kls}/{day}/delete/{id}',[App\Http\Controllers\Admin\JadwalController::class,'delete_jadwal'])->name('admin.penjadwalan.hari.delete');
         });
 
-        Route::get('test-cetak',[App\Http\Controllers\Admin\CetakController::class,'testCetak'])->name('test');
+        Route::prefix('cetak')->group(function(){
+            Route::get('/',[App\Http\Controllers\Admin\CetakController::class,'index'])->name('admin.cetak.index');
+        });
 
     });

@@ -13,6 +13,7 @@ use App\Models\Day;
 use App\Models\Jam;
 use App\Models\Ruang;
 use App\Models\Matkul;
+use App\Models\Absensi;
 use Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -50,6 +51,22 @@ class DashboardController extends Controller
     }
     public function mahasiswa()
     {
-        return view('mahasiswa.dashboard');
+        $absensi['hadir'] = Absensi::where([
+            ['mahasiswa_id',Auth::user()->id],
+            ['status','h'],
+        ])->get();
+        $absensi['sakit'] = Absensi::where([
+            ['mahasiswa_id',Auth::user()->id],
+            ['status','s'],
+        ])->get();
+        $absensi['izin'] = Absensi::where([
+            ['mahasiswa_id',Auth::user()->id],
+            ['status','i'],
+        ])->get();
+        $absensi['alpa'] = Absensi::where([
+            ['mahasiswa_id',Auth::user()->id],
+            ['status','a'],
+        ])->get();
+        return view('mahasiswa.dashboard',compact('absensi'));
     }
 }

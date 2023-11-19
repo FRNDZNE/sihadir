@@ -8,7 +8,7 @@
                 <div class="card-header">Dashboard Dosen</div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12">
+                        <div class="col-md-6 col-sm-6 col-12">
                             <div class="info-box">
                                 <span class="info-box-icon bg-info"><i class="fas fa-user-tie"></i></span>
                                 <div class="info-box-content">
@@ -19,37 +19,13 @@
                             </div>
                             <!-- /.info-box -->
                         </div>
-                        <div class="col-md-3 col-sm-6 col-12">
+                        <div class="col-md-6 col-sm-6 col-12">
                             <div class="info-box">
                                 <span class="info-box-icon bg-success"><i class="fas fa-users"></i></span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">Kelas</span>
                                     <span class="info-box-number"></span>
                                 </div>
-                            <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <div class="info-box">
-                            <span class="info-box-icon bg-warning"><i class="fas fa-book-open"></i></span>
-
-                            <div class="info-box-content">
-                                <span class="info-box-text">Mata Kuliah</span>
-                                <span class="info-box-number"></span>
-                            </div>
-                            <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <div class="info-box">
-                            <span class="info-box-icon bg-secondary"><i class="fas fa-door-open"></i></span>
-
-                            <div class="info-box-content">
-                                <span class="info-box-text">Ruangan</span>
-                                <span class="info-box-number"></span>
-                            </div>
                             <!-- /.info-box-content -->
                             </div>
                             <!-- /.info-box -->
