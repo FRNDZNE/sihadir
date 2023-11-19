@@ -98,8 +98,8 @@
             Route::post('/{smt}/{kls}/{day}/store',[App\Http\Controllers\Admin\JadwalController::class,'store_jadwal'])->name('admin.penjadwalan.hari.store');
             Route::post('/{smt}/{kls}/{day}/update',[App\Http\Controllers\Admin\JadwalController::class,'update_jadwal'])->name('admin.penjadwalan.hari.update');
             Route::post('/{smt}/{kls}/{day}/delete/{id}',[App\Http\Controllers\Admin\JadwalController::class,'delete_jadwal'])->name('admin.penjadwalan.hari.delete');
-            
-
         });
+
+        Route::get('test-cetak',[App\Http\Controllers\Admin\CetakController::class,'testCetak'])->name('test');
 
     });

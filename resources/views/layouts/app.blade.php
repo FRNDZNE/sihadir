@@ -122,7 +122,6 @@
     $("#absensiTable").DataTable({"pageLength": 50});
   });
 </script>
-
   <script type="text/javascript">
   $(function() {
     const Toast = Swal.mixin({

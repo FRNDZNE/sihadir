@@ -42,6 +42,13 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-header">Cetak</li>
+                            <li class="nav-item">
+                                <a href="{{ route('test') }}" class="nav-link">
+                                    <i class="nav-icon fas fa-file"></i>
+                                    <p>Rekap Absensi</p>
+                                </a>
+                            </li>
                         <li class="nav-header">DATA MAHASISWA</li>
                         <li class="nav-item">
                             <a href="{{ route('admin.mahasiswa.index') }}" class="nav-link">
