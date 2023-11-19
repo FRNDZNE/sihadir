@@ -5,21 +5,21 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header bg-warning"><h5>Edit Data Dosen</h5></div>
+                <div class="card-header bg-warning"><h5>Edit Dosen</h5></div>
                 <form action="{{ route('admin.dosen.update',$data->id) }}" method="post" enctype="multipart/form-data">
                     <div class="card-body">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="nip">Nip</label>
-                                    <input type="text" name="nip" id="nip" class="form-control" value="{{ $data->dosen->nip }}">
+                                    <label for="nip">NIP</label>
+                                    <input type="text" name="nip" id="nip" class="form-control" value="{{ $data->dosen->nip }}" placeholder="Masukkan NIP">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="nama">Nama</label>
-                                    <input type="text" name="name" id="nama" class="form-control" value="{{ $data->name }}">
+                                    <input type="text" name="name" id="nama" class="form-control" value="{{ $data->name }}" placeholder="Masukkan Nama">
                                 </div>
                             </div>
                         </div>
@@ -27,7 +27,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" class="form-control" value="{{ $data->email }}">
+                                    <input type="email" name="email" id="email" class="form-control" value="{{ $data->email }}" placeholder="Masukkan Email">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -64,7 +64,7 @@
 
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="submit" class="btn btn-warning">Update</button>
                         <a href="{{ route('admin.dosen.index') }}" class="btn btn-secondary">Kembali</a>
                     </div>
                 </form>

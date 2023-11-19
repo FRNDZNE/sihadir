@@ -29,13 +29,13 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="awal">Jam Mulai</label>
-                                                <input type="text" name="awal" id="awal" class="form-control" placeholder="Masukan Jam Mulai" aria-describedby="helpId">
+                                                <input type="text" name="awal" id="awal" class="form-control" placeholder="Masukkan Jam Mulai" aria-describedby="helpId">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="akhir">Jam Selesai</label>
-                                                <input type="text" name="akhir" id="akhir" class="form-control" placeholder="Masukan Jam Selesai" aria-describedby="helpId">
+                                                <input type="text" name="akhir" id="akhir" class="form-control" placeholder="Masukkan Jam Selesai" aria-describedby="helpId">
                                             </div>
                                         </div>
                                     </div>
@@ -52,10 +52,10 @@
                     <table id="tables" class="table">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Jam Mulai</th>
-                                <th>Jam Akhir</th>
-                                <th>Opsi</th>
+                                <th>NO</th>
+                                <th>JAM MULAI</th>
+                                <th>JAM AKHIR</th>
+                                <th>OPSI</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -87,20 +87,20 @@
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label for="awal">Jam Mulai</label>
-                                                                <input type="text" name="awal" id="awal" class="form-control" placeholder="Masukan Jam Mulai" aria-describedby="helpId" value="{{ $j->awal }}">
+                                                                <input type="text" name="awal" id="awal" class="form-control" placeholder="Masukkan Jam Mulai" aria-describedby="helpId" value="{{ $j->awal }}">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label for="akhir">Jam Selesai</label>
-                                                                <input type="text" name="akhir" id="akhir" class="form-control" placeholder="Masukan Jam Selesai" aria-describedby="helpId" value="{{ $j->akhir }}">
+                                                                <input type="text" name="akhir" id="akhir" class="form-control" placeholder="Masukkan Jam Selesai" aria-describedby="helpId" value="{{ $j->akhir }}">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                                        <button type="submit" class="btn btn-warning">Update</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -114,14 +114,14 @@
                                     <div class="modal fade" id="modaldelete-{{$j->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
-                                                <div class="modal-header bg-primary">
+                                                <div class="modal-header bg-danger">
                                                     <h5 class="modal-title"> Hapus Jam</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Apakah ingin menghapus jam {{$j->name}}
+                                                    Apakah ingin menghapus jam {{$j->awal.' - '.$j->akhir}} ?
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>

@@ -28,11 +28,11 @@
                                         @csrf
                                         <div class="form-group">
                                             <label for="name">Mata Kuliah</label>
-                                            <input type="text" name="name" id="name" class="form-control">
+                                            <input type="text" name="name" id="name" class="form-control" placeholder="Masukkan Mata Kuliah">
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                         <button type="submit" class="btn btn-primary">Simpan</button>
                                     </div>
                                 </form>
@@ -42,9 +42,9 @@
                     <table id="tables" class="table">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Mata Kuliah</th>
-                                <th>Opsi</th>
+                                <th>NO</th>
+                                <th>MATA KULIAH</th>
+                                <th>OPSI</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -62,7 +62,7 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header bg-warning">
-                                                    <h5 class="modal-title"> Tambah semester</h5>
+                                                    <h5 class="modal-title"> Edit Mata Kuliah</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -72,13 +72,13 @@
                                                     <div class="modal-body">
                                                         <input type="hidden" name="id" value="{{$m->id}}">
                                                         <div class="form-group">
-                                                            <label for="semester">semester</label>
-                                                            <input type="text" name="name" id="semester" value="{{$m->name}}" class="form-control" placeholder="Masukan semester" aria-describedby="helpId">
+                                                            <label for="semester">Mata Kuliah</label>
+                                                            <input type="text" name="name" id="semester" value="{{$m->name}}" class="form-control" placeholder="Masukkan Mata Kuliah" aria-describedby="helpId">
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                        <button type="submit" class="btn btn-warning">Simpan</button>
+                                                        <button type="submit" class="btn btn-warning">Update</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -94,16 +94,16 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header bg-danger">
-                                                    <h5 class="modal-title">Hapus semester</h5>
+                                                    <h5 class="modal-title">Hapus Mata Kuliah</h5>
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Ingin menghapus semester {{$m->name}} ?
+                                                    Apakah ingin menghapus mata kuliah {{$m->name}} ?
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                                     <form action="{{route('admin.matkul.smt.delete',[$semester->id, $m->id])}}" method="post">
                                                         @csrf
                                                         <button type="submit" class="btn btn-danger">Hapus</button>

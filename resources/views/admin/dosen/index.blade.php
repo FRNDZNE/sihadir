@@ -7,12 +7,12 @@
             <div class="card">
                 <div class="card-header"><h5>Data Dosen</h5></div>
                 <div class="card-body">
-                    <a href="{{ route('admin.dosen.create') }}" class="btn btn-primary">Tambah</a>
+                    <a href="{{ route('admin.dosen.create') }}" class="btn btn-primary btn-md"><i class="fas fa-plus"></i> Tambah</a>
                     <hr>
                     <table id="tables" class="table">
                         <thead>
                             <tr>
-                                <th>No</th>
+                                <th>NO</th>
                                 <th>NIP</th>
                                 <th>NAMA</th>
                                 <th>OPSI</th>
@@ -41,7 +41,7 @@
                                                         </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Ingin menghapus {{ $d->name }} dari daftar dosen
+                                                    Apakah ingin menghapus {{ $d->name }} dari daftar dosen ?
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>

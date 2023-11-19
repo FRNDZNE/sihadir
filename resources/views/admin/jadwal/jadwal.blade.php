@@ -11,7 +11,7 @@
                     
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modelCreate">
-                    Tambah
+                        <i class="fas fa-plus"></i> Tambah
                     </button>
                     
                     <!-- Modal -->
@@ -94,21 +94,21 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Save</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                        <button type="submit" class="btn btn-primary">Simpan</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                     <hr>
-                    <table class="table">
+                    <table id="tables" class="table">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Mata Kuliah</th>
-                                <th>Dosen Pengampu</th>
-                                <th>Opsi</th>
+                                <th>NO</th>
+                                <th>MATA KULIAH</th>
+                                <th>DOSEN PENGAMPU</th>
+                                <th>OPSI</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -208,8 +208,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                        <button type="submit" class="btn btn-warning">Edit</button>
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                                        <button type="submit" class="btn btn-warning">Update</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -233,10 +233,10 @@
                                                         </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Ingin Menghapus Jadwal Mata Kuliah {{ $jdw->matkul->name }} ?
+                                                    Apakah ingin menghapus jadwal mata kuliah {{ $jdw->matkul->name }} ?
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                                     <form action="{{ route('admin.penjadwalan.hari.delete',[$semester->id, $kelas->id, $day->id, $jdw->id]) }}" method="post">
                                                         @csrf
                                                         <button type="submit" class="btn btn-danger">Hapus</button>

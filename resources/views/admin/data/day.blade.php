@@ -27,7 +27,7 @@
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label for="day">Hari</label>
-                                        <input type="text" name="name" id="day" class="form-control" placeholder="Masukan Hari" aria-describedby="helpId">
+                                        <input type="text" name="name" id="day" class="form-control" placeholder="Masukkan Hari" aria-describedby="helpId">
                                     </div>
                                     </div>
                                     <div class="modal-footer">
@@ -42,7 +42,7 @@
                     <table id="tables" class="table">
                         <thead>
                             <tr>
-                                <th>No</th>
+                                <th>NO</th>
                                 <th>HARI</th>
                                 <th>OPSI</th>
                             </tr>
@@ -73,12 +73,12 @@
                                                     <input type="hidden" name="id" value="{{$j->id}}">
                                                     <div class="form-group">
                                                         <label for="day">Hari</label>
-                                                        <input type="text" name="name" id="day" value="{{$j->name}}" class="form-control" placeholder="Masukan Hari" aria-describedby="helpId">
+                                                        <input type="text" name="name" id="day" value="{{$j->name}}" class="form-control" placeholder="Masukkan Hari" aria-describedby="helpId">
                                                     </div>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                                        <button type="submit" class="btn btn-warning">Update</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -92,14 +92,14 @@
                                     <div class="modal fade" id="modaldelete-{{$j->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
-                                                <div class="modal-header bg-primary">
+                                                <div class="modal-header bg-danger">
                                                     <h5 class="modal-title"> Hapus Hari</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Apakah ingin menghapus Hari {{$j->name}}
+                                                    Apakah ingin menghapus hari {{$j->name}} ?
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>

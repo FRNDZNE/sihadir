@@ -7,11 +7,11 @@
             <div class="card">
                 <div class="card-header"><h5>Penjadwalan</h5></div>
                 <div class="card-body">
-                    <table class="table">
+                    <table class="table" id="tables">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Semester</th>
+                                <th>NO</th>
+                                <th>SEMESTER</th>
                             </tr>
                         </thead>
                         <tbody>
