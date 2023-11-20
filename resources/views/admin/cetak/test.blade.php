@@ -70,7 +70,7 @@
         }
 
         img {
-            width: 70px;
+            width: 65px;
         }
     </style>
 </head>
@@ -78,7 +78,7 @@
 <body>
     <div class="border-3">
         <div class="logo-kiri">
-            <img src="{{ asset('images/logo-polnep-test.jpg') }}" alt="Logo">
+            <img src="{{ asset('images/LOGO POLNEP (PNG).png') }}" alt="Logo">
         </div>
         <div class="kop">
             <h6 class="text-center">REKAPITULASI ABSENSI PERKULIAHAN</h6>
@@ -87,7 +87,7 @@
             <h6 class="text-center">SEMESTER GENAP TAHUN AKADEMIK 2022/2023</h6>
         </div>
         <div class="logo-kanan">
-            <img src="{{ asset('images/logo-elektro-test.jpg') }}" alt="Logo">
+            <img src="{{ asset('images/Logo Elektro Asli.png') }}" alt="Logo">
         </div>
     </div>
     <div style="padding-bottom: 5px; text-align:center;">
