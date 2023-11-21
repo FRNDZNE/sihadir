@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('title','Profil')
 @section('content')
+@php
+    
+@endphp
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -22,7 +25,7 @@
                             @foreach ($data['week'] as $w)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td><a href="">{{ $w->name }}</a></td>
+                                <td><a href="{{ route('admin.rekap', [$data['semester']->id, $data['kelas']->id,$w->id] ) }}">{{ $w->name }}</a></td>
                             </tr>
                             @endforeach
                         </tbody>

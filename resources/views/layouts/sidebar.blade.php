@@ -42,7 +42,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-header">CETAK</li>
+                        <li class="nav-header">ABSENSI</li>
                         <li class="nav-item">
                             <a href="{{ route('admin.cetak.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-signature"></i>

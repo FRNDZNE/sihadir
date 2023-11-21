@@ -31,9 +31,9 @@ class DashboardController extends Controller
         $data['matkul'] = Matkul::all();
         return view('admin.dashboard',compact('data'));
     }
-    public function dosen(Request $request)
+    public function dosen()
     {
-        $data = Jadwal::where('dosen_id', $request->user()->id)
+        $data = Jadwal::where('dosen_id', Auth::user()->id)
             ->with(['kelas', 'ruang', 'day', 'jam', 'dosen', 'matkul', 'semester'])
             ->get();
 
