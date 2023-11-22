@@ -14,10 +14,7 @@
         }
 
         .border-3 {
-            border: 3px solid black;
-            display: flex;
-            margin-bottom: 5px;
-            height: 65px;
+            border: 1px solid black;
         }
 
         img {
@@ -70,421 +67,783 @@
         }
 
         img {
-            width: 65px;
+            width: 100px;
+        }
+        p:first-of-type {
+            writing-mode: vertical-lr;
+        }
+        .page-break{
+            page-break-before: avoid;
+            page-break-inside: avoid;
+            page-break-after: avoid;
         }
     </style>
 </head>
 
 <body>
-    <div class="border-3">
-        <div class="logo-kiri">
-            <img src="{{ asset('images/LOGO POLNEP (PNG).png') }}" alt="Logo">
-        </div>
-        <div class="kop">
-            <h6 class="text-center">REKAPITULASI ABSENSI PERKULIAHAN</h6>
-            <h6 class="text-center">JURUSAN TEKNIK ELEKTRO</h6>
-            <h6 class="text-center">PROGRAM STUDI D.III TEKNIK INFORMATIKA</h6>
-            <h6 class="text-center">SEMESTER GENAP TAHUN AKADEMIK 2022/2023</h6>
-        </div>
-        <div class="logo-kanan">
-            <img src="{{ asset('images/Logo Elektro Asli.png') }}" alt="Logo">
-        </div>
-    </div>
-    <div style="padding-bottom: 5px; text-align:center;">
-        <h6><u>SEMESTER IV / B</u></h6>
-    </div>
-    <div style="padding-bottom: 20px">
-        <h6 class="kiri">MINGGU KE: 17</h6>
-        <h6 class="kanan">Tanggal: 07 Agustus 2023 s/d 11 Agustus 2023</h6>
+<div class="page-break">
+  <table class="border-3" style="width:100%;">
+      <tr>
+        <td class="text-center" style="width: 33%;"><img src="{{ asset('images/LOGO POLNEP (PNG).png') }}" alt="Logo"></td>
+        <td class="text-center" style="width: 33%;">
+          <h6>POLITEKNIK NEGERI PONTIANAK</h6>
+          <h6>JURUSAN TEKNIK ELEKTRO</h6>
+          <h6>Jalan Jenderal Ahmad Yani - Pontianak 78124, Kalimantan Barat</h6>
+          <h6>Telepon: (0561)736180, Faksimile: (0561) 740143, Kotak Pos 1286</h6>
+          <a href="http://www.polnep.ac.id/">Laman www.polnep.ac.id</a>
+        </td>
+        <td style="width: 33%;"></td>
+      </tr>
+  </table>
+    <div class="text-center" style="margin: 10px;">
+      <h6>JADWAL PBM SEMESTER GANJIL</h6>
+      <h6>PROGRAM STUDI TEKNIK INFORMATIKA JURUSAN TEKNIK ELEKTRO POLITEKNIK NEGERI PONTIANAK</h6>
+      <h6>TAHUN 2023 / 2024</h6>
     </div>
     <table class="text-center" border="1" style="width:100%; margin-bottom:10px">
         <thead style="background-color:yellow;">
             <tr>
-                <th rowspan="2">No.</th>
-                <th rowspan="2">Nama Mahasiswa</th>
-                <th rowspan="2">NIM</th>
-                <th colspan="3">Jumlah</th>
-                <th rowspan="1">Jumlah</th>
-                <th rowspan="2">Status</th>
-                <th rowspan="1">Kompensasi</th>
+                <th rowspan="3">Hari</th>
+                <th rowspan="3">Slot</th>
+                <th rowspan="3">Durasi</th>
+                <th colspan="15">Semester 5</th>
             </tr>
             <tr>
-                <th>Alpha</th>
-                <th>Izin</th>
-                <th>Sakit</th>
-                <th>A/I/S</th>
-                <th style="background-color:red;">Jumlah</th>
+                <th colspan="3">A</th>
+                <th colspan="3">B</th>
+                <th colspan="3">C</th>
+                <th colspan="3">D</th>
+                <th colspan="3">IC</th>
+            </tr>
+            <tr>
+              <th>MK</th>
+              <th>Dosen</th>
+              <th>Ruang</th>
+              <th>MK</th>
+              <th>Dosen</th>
+              <th>Ruang</th>
+              <th>MK</th>
+              <th>Dosen</th>
+              <th>Ruang</th>
+              <th>MK</th>
+              <th>Dosen</th>
+              <th>Ruang</th>
+              <th>MK</th>
+              <th>Dosen</th>
+              <th>Ruang</th>
             </tr>
         </thead>
         <tbody>
             <tr>
+              <td align="middle" rowspan="14"><p style="margin:0;padding:0;">Senin</p></td>
+              <td>1</td>
+              <td>07:00-07:50</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+            </tr>
+            <tr>
+              
+              <td>2</td>
+              <td>07:50-08:40</td>
+              
+            </tr>
+            <tr>
+              
+              <td>3</td>
+              <td>08:40-09:30</td>
+            
+            </tr>
+            <tr>
+              <td></td>
+              <td>09:30-09:45</td>
+              <td colspan="15">Istirahat</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>09:45-10:35</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+            </tr>
+            <tr>
+              
+              <td>5</td>
+              <td>10:35-11:25</td>
+              
+            </tr>
+            <tr>
+              
+              <td>6</td>
+              <td>11:25-12:15</td>
+            
+            </tr>
+            <tr>
+              <td></td>
+              <td>12:15-13:00</td>
+              <td colspan="15">Istirahat</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>13:00-13:50</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+            </tr>
+            <tr>
+              
+              <td>8</td>
+              <td>13:50-14:40</td>
+              
+            </tr>
+            <tr>
+              <td></td>
+              <td>14:40-15:30</td>
+              <td colspan="15">Istirahat</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>15:30-16:20</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+            </tr>
+            <tr>
+              
+              <td>10</td>
+              <td>16:20-17:10</td>
+              
+            </tr>
+            <tr>
+              
+              <td>11</td>
+              <td>17:10-18:00</td>
+            
+            </tr>
+            <tr>
+              <td colspan="18">Pergantian Jam</td>
+            </tr>
+
+            <tr>
+                <td align="middle" rowspan="14"><p style="margin:0;padding:0;">Selasa</p></td>
                 <td>1</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
-            </tr>
-            <tr>
+                <td>07:00-07:50</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
                 <td>2</td>
-                <td>Zidean Safwan Alfarozi</td>
-                <td>3202116012</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
+                <td>07:50-08:40</td>
+                
+              </tr>
+              <tr>
+                
                 <td>3</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
-            </tr>
-            <tr>
+                <td>08:40-09:30</td>
+              
+              </tr>
+              <tr>
+                <td></td>
+                <td>09:30-09:45</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
                 <td>4</td>
-                <td>Zidean Safwan Alfarozi</td>
-                <td>3202116012</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
+                <td>09:45-10:35</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
                 <td>5</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
-            </tr>
-            <tr>
+                <td>10:35-11:25</td>
+                
+              </tr>
+              <tr>
+                
                 <td>6</td>
-                <td>Zidean Safwan Alfarozi</td>
-                <td>3202116012</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
+                <td>11:25-12:15</td>
+              
+              </tr>
+              <tr>
+                <td></td>
+                <td>12:15-13:00</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
                 <td>7</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
+                <td>13:00-13:50</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+              </tr>
+              <tr>
+                
                 <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Zidean Safwan Alfarozi</td>
-                <td>3202116012</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
+                <td>13:50-14:40</td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td>14:40-15:30</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
                 <td>9</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
-            </tr>
-            <tr>
+                <td>15:30-16:20</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
                 <td>10</td>
-                <td>Zidean Safwan Alfarozi</td>
-                <td>3202116012</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
+                <td>16:20-17:10</td>
+                
+              </tr>
+              <tr>
+                
                 <td>11</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
+                <td>17:10-18:00</td>
+              
+              </tr>
+              <tr>
+                <td colspan="18">Pergantian Jam</td>
+              </tr>
+
+              <tr>
+              <td align="middle" rowspan="14"><p style="margin:0;padding:0;">Rabu</p></td>
+              <td>1</td>
+              <td>07:00-07:50</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
             </tr>
             <tr>
-                <td>12</td>
-                <td>Zidean Safwan Alfarozi</td>
-                <td>3202116012</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+              
+              <td>2</td>
+              <td>07:50-08:40</td>
+              
             </tr>
             <tr>
-                <td>13</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
+              
+              <td>3</td>
+              <td>08:40-09:30</td>
+            
             </tr>
             <tr>
-                <td>14</td>
-                <td>Zidean Safwan Alfarozi</td>
-                <td>3202116012</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+              <td></td>
+              <td>09:30-09:45</td>
+              <td colspan="15">Istirahat</td>
             </tr>
             <tr>
-                <td>15</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
+              <td>4</td>
+              <td>09:45-10:35</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
             </tr>
             <tr>
-                <td>16</td>
-                <td>Zidean Safwan Alfarozi</td>
-                <td>3202116012</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+              
+              <td>5</td>
+              <td>10:35-11:25</td>
+              
             </tr>
             <tr>
-                <td>17</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
+              
+              <td>6</td>
+              <td>11:25-12:15</td>
+            
             </tr>
             <tr>
-                <td>18</td>
-                <td>Zidean Safwan Alfarozi</td>
-                <td>3202116012</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+              <td></td>
+              <td>12:15-13:00</td>
+              <td colspan="15">Istirahat</td>
             </tr>
             <tr>
-                <td>19</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
+              <td>7</td>
+              <td>13:00-13:50</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
             </tr>
             <tr>
-                <td>20</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
+              
+              <td>8</td>
+              <td>13:50-14:40</td>
+              
             </tr>
             <tr>
-                <td>21</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
+              <td></td>
+              <td>14:40-15:30</td>
+              <td colspan="15">Istirahat</td>
             </tr>
             <tr>
-                <td>22</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
+              <td>9</td>
+              <td>15:30-16:20</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
             </tr>
             <tr>
-                <td>23</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
+              
+              <td>10</td>
+              <td>16:20-17:10</td>
+              
             </tr>
             <tr>
-                <td>24</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
+              
+              <td>11</td>
+              <td>17:10-18:00</td>
+            
             </tr>
             <tr>
-                <td>25</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
+              <td colspan="18">Pergantian Jam</td>
             </tr>
+
             <tr>
-                <td>25</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
+                <td align="middle" rowspan="14"><p style="margin:0;padding:0;">Kamis</p></td>
+                <td>1</td>
+                <td>07:00-07:50</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>2</td>
+                <td>07:50-08:40</td>
+                
+              </tr>
+              <tr>
+                
+                <td>3</td>
+                <td>08:40-09:30</td>
+              
+              </tr>
+              <tr>
+                <td></td>
+                <td>09:30-09:45</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>09:45-10:35</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>5</td>
+                <td>10:35-11:25</td>
+                
+              </tr>
+              <tr>
+                
+                <td>6</td>
+                <td>11:25-12:15</td>
+              
+              </tr>
+              <tr>
+                <td></td>
+                <td>12:15-13:00</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>13:00-13:50</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+              </tr>
+              <tr>
+                
                 <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
+                <td>13:50-14:40</td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td>14:40-15:30</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>15:30-16:20</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>10</td>
+                <td>16:20-17:10</td>
+                
+              </tr>
+              <tr>
+                
+                <td>11</td>
+                <td>17:10-18:00</td>
+              
+              </tr>
+              <tr>
+                <td colspan="18">Pergantian Jam</td>
+              </tr>
+
+              <tr>
+                <td align="middle" rowspan="14"><p style="margin:0;padding:0;">Jum'at</p></td>
+                <td>1</td>
+                <td>07:00-07:50</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>2</td>
+                <td>07:50-08:40</td>
+                
+              </tr>
+              <tr>
+                
+                <td>3</td>
+                <td>08:40-09:30</td>
+              
+              </tr>
+              <tr>
+                <td></td>
+                <td>09:30-09:45</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>09:45-10:35</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>5</td>
+                <td>10:35-11:25</td>
+                
+              </tr>
+              <tr>
+                
+                <td>6</td>
+                <td>11:25-12:15</td>
+              
+              </tr>
+              <tr>
+                <td></td>
+                <td>12:15-13:00</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>13:00-13:50</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+              </tr>
+              <tr>
+                
                 <td>8</td>
-            </tr>
-            <tr>
-                <td>25</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
-            </tr>
-            <tr>
-                <td>25</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
-            </tr>
-            <tr>
-                <td>25</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
-            </tr>
-            <tr>
-                <td>25</td>
-                <td>Ridho Faturrahman</td>
-                <td>3202116011</td>
-                <td>8</td>
-                <td>51</td>
-                <td>151</td>
-                <td>210</td>
-                <td>-</td>
-                <td>8</td>
-            </tr>
+                <td>13:50-14:40</td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td>14:40-15:30</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>15:30-16:20</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>10</td>
+                <td>16:20-17:10</td>
+                
+              </tr>
+              <tr>
+                
+                <td>11</td>
+                <td>17:10-18:00</td>
+              
+              </tr>
+              <tr>
+                <td colspan="18">Pergantian Jam</td>
+              </tr>
         </tbody>
     </table>
     <table width="100%">
         <tr>
-            <td rowspan="2" width="65%">
-                <h6>Keterangan:</h6>
-                <h6>16 - 31 Jam = SP 1</h6>
-                <h6>32 - 37 Jam = SP 2</h6>
-                <h6>38 - 45 Jam = SP 3</h6>
-                <br>
-                <table class="text-center" border="1">
-                    <thead>
-                        <tr>
-                            <th>Lama Ketidakhadiran</th>
-                            <th>Kompensasi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Alpha <= 1 Jam</td>
-                            <td>5 X</td>
-                        </tr>
-                        <tr>
-                            <td>1 Jam < Alpha < 8 Jam</td>
-                            <td>8 Jam</td>
-                        </tr>
-                        <tr>
-                            <td>Alpha >= 8 Jam</td>
-                            <td>2 X</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <td valign="top" width="80%" style="height: 120px">
+                <h6>Mengetahui</h6>
+                <h6>Ketua Jurusan</h6>
+                <h6>Teknik Elektro</h6>
+                
             </td>
             <td rowspan="1" valign="top">
-                <h6>Pontianak, 11 Agustus 2023</h6>
-                <h6>Koordinator Teknik Informatika</h6>
+                <h6>Pontianak, 20 September 2023</h6>
+                <br>
+                <h6>Koordinator Program Studi</h6>
+                <h6>Teknik Informatika</h6>
             </td>
         <tr>
+            <td valign="bottom">
+                <h6>HASAN</h6>
+                <h6>NIP. 197108201999031003</h6>
+            </td>
             <td valign="bottom">
                 <h6>MARIANA SYAMSUDIN</h6>
                 <h6>NIP. 197503142006042001</h6>
@@ -492,6 +851,7 @@
         </tr>
         </tr>
     </table>
+</div>
 </body>
 
 </html>

@@ -76,7 +76,8 @@ class CetakController extends Controller
 
     public function testCetak()
     {
-        $pdf = PDF::loadView('admin.cetak.test')->setPaper('a4','portrait');
-        return $pdf->stream();
+        $paper = array(0,0,950,1650);
+        $pdf = PDF::loadView('admin.cetak.test')->setPaper($paper);
+        return $pdf->download();
     }
 }
