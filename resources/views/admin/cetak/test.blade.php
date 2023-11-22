@@ -67,18 +67,24 @@
         }
 
         img {
-            width: 65px;
+            width: 100px;
         }
         p:first-of-type {
             writing-mode: vertical-lr;
+        }
+        .page-break{
+            page-break-before: avoid;
+            page-break-inside: avoid;
+            page-break-after: avoid;
         }
     </style>
 </head>
 
 <body>
+<div class="page-break">
   <table class="border-3" style="width:100%;">
       <tr>
-        <td style="width: 33%;"><img src="{{ asset('images/LOGO POLNEP (PNG).png') }}" alt="Logo"></td>
+        <td class="text-center" style="width: 33%;"><img src="{{ asset('images/LOGO POLNEP (PNG).png') }}" alt="Logo"></td>
         <td class="text-center" style="width: 33%;">
           <h6>POLITEKNIK NEGERI PONTIANAK</h6>
           <h6>JURUSAN TEKNIK ELEKTRO</h6>
@@ -263,14 +269,565 @@
             
             </tr>
             <tr>
-              <td colspan="18">a</td>
+              <td colspan="18">Pergantian Jam</td>
             </tr>
 
+            <tr>
+                <td align="middle" rowspan="14"><p style="margin:0;padding:0;">Selasa</p></td>
+                <td>1</td>
+                <td>07:00-07:50</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>2</td>
+                <td>07:50-08:40</td>
+                
+              </tr>
+              <tr>
+                
+                <td>3</td>
+                <td>08:40-09:30</td>
+              
+              </tr>
+              <tr>
+                <td></td>
+                <td>09:30-09:45</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>09:45-10:35</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>5</td>
+                <td>10:35-11:25</td>
+                
+              </tr>
+              <tr>
+                
+                <td>6</td>
+                <td>11:25-12:15</td>
+              
+              </tr>
+              <tr>
+                <td></td>
+                <td>12:15-13:00</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>13:00-13:50</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>8</td>
+                <td>13:50-14:40</td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td>14:40-15:30</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>15:30-16:20</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>10</td>
+                <td>16:20-17:10</td>
+                
+              </tr>
+              <tr>
+                
+                <td>11</td>
+                <td>17:10-18:00</td>
+              
+              </tr>
+              <tr>
+                <td colspan="18">Pergantian Jam</td>
+              </tr>
+
+              <tr>
+              <td align="middle" rowspan="14"><p style="margin:0;padding:0;">Rabu</p></td>
+              <td>1</td>
+              <td>07:00-07:50</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+            </tr>
+            <tr>
+              
+              <td>2</td>
+              <td>07:50-08:40</td>
+              
+            </tr>
+            <tr>
+              
+              <td>3</td>
+              <td>08:40-09:30</td>
+            
+            </tr>
+            <tr>
+              <td></td>
+              <td>09:30-09:45</td>
+              <td colspan="15">Istirahat</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>09:45-10:35</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+            </tr>
+            <tr>
+              
+              <td>5</td>
+              <td>10:35-11:25</td>
+              
+            </tr>
+            <tr>
+              
+              <td>6</td>
+              <td>11:25-12:15</td>
+            
+            </tr>
+            <tr>
+              <td></td>
+              <td>12:15-13:00</td>
+              <td colspan="15">Istirahat</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>13:00-13:50</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+              <td rowspan="2">PBL</td>
+              <td rowspan="2">FF</td>
+              <td rowspan="2">TI-11</td>
+            </tr>
+            <tr>
+              
+              <td>8</td>
+              <td>13:50-14:40</td>
+              
+            </tr>
+            <tr>
+              <td></td>
+              <td>14:40-15:30</td>
+              <td colspan="15">Istirahat</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>15:30-16:20</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+              <td rowspan="3">PBL</td>
+              <td rowspan="3">FF</td>
+              <td rowspan="3">TI-11</td>
+            </tr>
+            <tr>
+              
+              <td>10</td>
+              <td>16:20-17:10</td>
+              
+            </tr>
+            <tr>
+              
+              <td>11</td>
+              <td>17:10-18:00</td>
+            
+            </tr>
+            <tr>
+              <td colspan="18">Pergantian Jam</td>
+            </tr>
+
+            <tr>
+                <td align="middle" rowspan="14"><p style="margin:0;padding:0;">Kamis</p></td>
+                <td>1</td>
+                <td>07:00-07:50</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>2</td>
+                <td>07:50-08:40</td>
+                
+              </tr>
+              <tr>
+                
+                <td>3</td>
+                <td>08:40-09:30</td>
+              
+              </tr>
+              <tr>
+                <td></td>
+                <td>09:30-09:45</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>09:45-10:35</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>5</td>
+                <td>10:35-11:25</td>
+                
+              </tr>
+              <tr>
+                
+                <td>6</td>
+                <td>11:25-12:15</td>
+              
+              </tr>
+              <tr>
+                <td></td>
+                <td>12:15-13:00</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>13:00-13:50</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>8</td>
+                <td>13:50-14:40</td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td>14:40-15:30</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>15:30-16:20</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>10</td>
+                <td>16:20-17:10</td>
+                
+              </tr>
+              <tr>
+                
+                <td>11</td>
+                <td>17:10-18:00</td>
+              
+              </tr>
+              <tr>
+                <td colspan="18">Pergantian Jam</td>
+              </tr>
+
+              <tr>
+                <td align="middle" rowspan="14"><p style="margin:0;padding:0;">Jum'at</p></td>
+                <td>1</td>
+                <td>07:00-07:50</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>2</td>
+                <td>07:50-08:40</td>
+                
+              </tr>
+              <tr>
+                
+                <td>3</td>
+                <td>08:40-09:30</td>
+              
+              </tr>
+              <tr>
+                <td></td>
+                <td>09:30-09:45</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>09:45-10:35</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>5</td>
+                <td>10:35-11:25</td>
+                
+              </tr>
+              <tr>
+                
+                <td>6</td>
+                <td>11:25-12:15</td>
+              
+              </tr>
+              <tr>
+                <td></td>
+                <td>12:15-13:00</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>13:00-13:50</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+                <td rowspan="2">PBL</td>
+                <td rowspan="2">FF</td>
+                <td rowspan="2">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>8</td>
+                <td>13:50-14:40</td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td>14:40-15:30</td>
+                <td colspan="15">Istirahat</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>15:30-16:20</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+                <td rowspan="3">PBL</td>
+                <td rowspan="3">FF</td>
+                <td rowspan="3">TI-11</td>
+              </tr>
+              <tr>
+                
+                <td>10</td>
+                <td>16:20-17:10</td>
+                
+              </tr>
+              <tr>
+                
+                <td>11</td>
+                <td>17:10-18:00</td>
+              
+              </tr>
+              <tr>
+                <td colspan="18">Pergantian Jam</td>
+              </tr>
         </tbody>
     </table>
-    <table width="100%" height="170px">
+    <table width="100%">
         <tr>
-            <td valign="top" width="85%">
+            <td valign="top" width="80%" style="height: 120px">
                 <h6>Mengetahui</h6>
                 <h6>Ketua Jurusan</h6>
                 <h6>Teknik Elektro</h6>
@@ -294,6 +851,7 @@
         </tr>
         </tr>
     </table>
+</div>
 </body>
 
 </html>
