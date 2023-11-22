@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title','Dashboard')
+@section('mahasiswa.dashboard','active')
 @section('content')
 @php
     $hadir = count($absensi['hadir']);

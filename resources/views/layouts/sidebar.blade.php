@@ -35,7 +35,7 @@
                         </li>
                         <li class="nav-header">DATA DOSEN</li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.dosen.index') }}" class="nav-link">
+                            <a href="{{ route('admin.dosen.index') }}" class="nav-link @yield('admin.dosen')">
                                 <i class="nav-icon fas fa-user-tie"></i>
                                 <p>
                                     Dosen
@@ -61,62 +61,62 @@
                         </li>
                         <li class="nav-header">DATA MAHASISWA</li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.mahasiswa.index') }}" class="nav-link">
+                            <a href="{{ route('admin.mahasiswa.index') }}" class="nav-link @yield('admin.mahasiswa')">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>Mahasiswa</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.kelas.index') }}" class="nav-link">
+                            <a href="{{ route('admin.kelas.index') }}" class="nav-link @yield('admin.kelas')">
                                 <i class="nav-icon fas fa-spell-check"></i>
                                 <p>Kelas</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.angkatan.index') }}" class="nav-link">
+                            <a href="{{ route('admin.angkatan.index') }}" class="nav-link @yield('admin.angkatan')">
                                 <i class="nav-icon fas fa-chart-line"></i>
                                 <p>Angkatan</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.semester.index') }}" class="nav-link">
+                            <a href="{{ route('admin.semester.index') }}" class="nav-link @yield('admin.semester')">
                                 <i class="nav-icon fas fa-sort-numeric-up-alt"></i>
                                 <p>Semester</p>
                             </a>
                         </li>
                         <li class="nav-header">PENJADWALAN</li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.penjadwalan.index') }}" class="nav-link">
+                            <a href="{{ route('admin.penjadwalan.index') }}" class="nav-link @yield('admin.jadwal')">
                                 <i class="nav-icon fas fa-network-wired"></i>
                                 <p>Jadwal</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.matkul.index') }}" class="nav-link">
+                            <a href="{{ route('admin.matkul.index') }}" class="nav-link @yield('admin.matkul')">
                                 <i class="nav-icon fas fa-book-open"></i>
                                 <p>Mata Kuliah</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.jam.index') }}" class="nav-link">
+                            <a href="{{ route('admin.jam.index') }}" class="nav-link @yield('admin.jam')">
                                 <i class="nav-icon fas fa-clock"></i>
                                 <p>Jam</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.ruangan.index') }}" class="nav-link">
+                            <a href="{{ route('admin.ruangan.index') }}" class="nav-link @yield('admin.ruangan')">
                                 <i class="nav-icon fas fa-door-open"></i>
                                 <p>Ruangan</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.day.index') }}" class="nav-link">
+                            <a href="{{ route('admin.day.index') }}" class="nav-link @yield('admin.hari')">
                                 <i class="nav-icon fas fa-calendar-day"></i>
                                 <p>Hari</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.week.index') }}" class="nav-link">
+                            <a href="{{ route('admin.week.index') }}" class="nav-link @yield('admin.minggu')">
                                 <i class="nav-icon fas fa-calendar-week"></i>
                                 <p>Minggu</p>
                             </a>
@@ -156,7 +156,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="" class="nav-link @yield('dosen.absensi')">
                                 <i class="nav-icon fas fa-swatchbook"></i>
                                 <p>
                                     Absensi
@@ -165,7 +165,7 @@
                         </li>
                         <li class="nav-header">DATA DOSEN</li>
                         <li class="nav-item">
-                            <a href="{{ route('dosen.profil') }}" class="nav-link">
+                            <a href="{{ route('dosen.profil') }}" class="nav-link @yield('dosen.profil')">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>
                                     Profil
@@ -192,7 +192,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                                                 with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="{{ route('mahasiswa.dashboard') }}" class="nav-link">
+                            <a href="{{ route('mahasiswa.dashboard') }}" class="nav-link @yield('mahasiswa.dashboard')">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -201,7 +201,7 @@
                         </li>
                         <li class="nav-header">DATA MAHASISWA</li>
                         <li class="nav-item">
-                            <a href="{{ route('mahasiswa.profil') }}" class="nav-link">
+                            <a href="{{ route('mahasiswa.profil') }}" class="nav-link @yield('mahasiswa.profil')">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>
                                     Profil
