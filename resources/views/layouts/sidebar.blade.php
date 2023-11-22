@@ -51,6 +51,14 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.absensi.index') }}" class="nav-link">
+                                <i class="nav-icon fas fa-swatchbook"></i>
+                                <p>
+                                    Absensi
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-header">DATA MAHASISWA</li>
                         <li class="nav-item">
                             <a href="{{ route('admin.mahasiswa.index') }}" class="nav-link">
@@ -148,8 +156,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('dosen.dashboard') }}" class="nav-link">
-                                <i class="nav-icon fas fa-calendar-check"></i>
+                            <a href="" class="nav-link">
+                                <i class="nav-icon fas fa-swatchbook"></i>
                                 <p>
                                     Absensi
                                 </p>

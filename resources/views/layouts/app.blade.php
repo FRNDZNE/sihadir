@@ -115,6 +115,7 @@
 <script src="{{ asset('/') }}/template/plugins/jquery-mapael/maps/usa_states.min.js"></script>
 <!-- PAGE SCRIPTS -->
 <script src="{{ asset('/') }}/template/dist/js/pages/dashboard2.js"></script>
+@yield('js')
 <script>
   $(function () {
     $("#tables").DataTable();
