@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title','Dashboard')
+@section('admin.dashboard','active')
 @section('content')
 @php
     $hitungRuang  = count($data['ruang']);
