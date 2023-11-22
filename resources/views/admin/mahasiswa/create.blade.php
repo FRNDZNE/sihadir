@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title','Tambah Data Mahasiswa')
+@section('admin.mahasiswa','active')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

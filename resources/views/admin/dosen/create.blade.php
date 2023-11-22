@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title','Tambah Data Dosen')
+@section('admin.dosen','active')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title','Penjadwalan')
+@section('admin.jadwal','active')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
