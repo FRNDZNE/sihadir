@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Jadwal;
 use App\Models\User;
-use App\Models\Dosen;
 use App\Models\Week;
 use App\Models\Mahasiswa;
 use App\Models\Absensi;
@@ -58,8 +57,10 @@ class DosenController extends Controller
             $q->where('jadwal_id',$jdw);
             $q->where('week_id',$week);
         }])
-        ->where('kelas_id',$jadwal->kelas_id)
-        ->where('semester_id',$jadwal->semester_id)
+        ->where([
+            ['kelas_id', $jadwal->kelas_id],
+            ['semester_id',$jadwal->semester->id],
+        ])
         ->get();
 
         // return $mahasiswa;

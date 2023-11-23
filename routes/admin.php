@@ -130,6 +130,8 @@
         // Absensi Dari Halaman Admin
         Route::prefix('absensi')->group(function(){
             Route::get('/',[AbsensiController::class,'index'])->name('admin.absensi.index');
+            Route::get('/{semester}',[AbsensiController::class,'indexSmt'])->name('admin.absensi.smt');
+            Route::get('/{semester}/{kelas}',[Absensi::class,'indexKls'])->name('');
         });
 
     });

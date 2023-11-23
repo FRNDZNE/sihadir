@@ -35,7 +35,7 @@
                                 <div class="icon">
                                     <i class="fas fa-school"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">
+                                <a href="" class="small-box-footer">
                                     Masuk <i class="fas fa-arrow-circle-right"></i>
                                 </a>
                                 </div>
