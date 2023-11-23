@@ -39,14 +39,14 @@ class CetakController extends Controller
         $data['semester'] = Semester::where('id',$smt)->first();
         $data['kelas'] = Kelas::where('id',$kls)->first();
         $data['week'] = Week::where('id',$week)->first();
-        
+
         $data['mahasiswa'] = User::with(['mahasiswa'])->whereHas(
             'mahasiswa', function($q)use($smt,$kls){
                 $q->where([
                     ['semester_id',$smt],
                     ['kelas_id',$kls],
                 ]);
-            }    
+            }
         )->withCount([
             'absensi as sakit' => function($q)use($week){
                 $q->where([
@@ -69,7 +69,7 @@ class CetakController extends Controller
         ])
         ->get();
         // return $data['mahasiswa'];
-        
+
         $pdf = PDF::loadView('admin.cetak.absensi',compact('data'))->setPaper('a4','portrait');
         return $pdf->stream();
     }
@@ -79,5 +79,9 @@ class CetakController extends Controller
         $paper = array(0,0,950,1650);
         $pdf = PDF::loadView('admin.cetak.test')->setPaper($paper);
         return $pdf->download();
+    }
+    public function testCetakSP(){
+        $pdf = PDF::loadView('admin.cetak.test2')->setPaper('a4','portrait');
+        return $pdf->stream();
     }
 }

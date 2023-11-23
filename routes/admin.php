@@ -126,6 +126,7 @@
         });
 
         Route::get('/test-cetak',[CetakController::class,'testCetak'])->name('cetak');
+        Route::get('/test-cetak-sp',[CetakController::class,'testCetakSP'])->name('cetaksp');
 
         // Absensi Dari Halaman Admin
         Route::prefix('absensi')->group(function(){
