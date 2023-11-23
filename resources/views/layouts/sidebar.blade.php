@@ -44,7 +44,7 @@
                         </li>
                         <li class="nav-header">ABSENSI</li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.cetak.index') }}" class="nav-link">
+                            <a href="{{ route('admin.cetak.index') }}" class="nav-link @yield('admin.rekap')">
                                 <i class="nav-icon fas fa-file-signature"></i>
                                 <p>
                                     Rekap Absensi
@@ -52,7 +52,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.absensi.index') }}" class="nav-link">
+                            <a href="{{ route('admin.absensi.index') }}" class="nav-link @yield('admin.absensi')">
                                 <i class="nav-icon fas fa-swatchbook"></i>
                                 <p>
                                     Absensi

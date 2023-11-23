@@ -131,8 +131,11 @@
         // Absensi Dari Halaman Admin
         Route::prefix('absensi')->group(function(){
             Route::get('/',[AbsensiController::class,'index'])->name('admin.absensi.index');
-            Route::get('/{semester}',[AbsensiController::class,'indexSmt'])->name('admin.absensi.smt');
-            Route::get('/{semester}/{kelas}',[Absensi::class,'indexKls'])->name('');
+            Route::get('/{semester}',[AbsensiController::class,'indexKls'])->name('admin.absensi.kelas');
+            Route::get('/{semester}/{kelas}',[AbsensiController::class,'indexJdw'])->name('admin.absensi.jadwal');
+            Route::get('/{semester}/{kelas}/{jadwal}',[AbsensiController::class,'indexWeek'])->name('admin.absensi.minggu');
+            Route::get('/{semester}/{kelas}/{jadwal}/{minggu}',[AbsensiController::class,'indexAbsensi'])->name('admin.absen');
+            Route::post('/{semester}/{kelas}/{jadwal}/{minggu}/absen',[AbsensiController::class,'storeAbsensi'])->name('admin.absen.store');
         });
 
     });

@@ -1,35 +1,35 @@
 @extends('layouts.app')
-@section('title','Profil')
+@section('title','Rekap Absensi')
+@section('admin.rekap','active')
 @section('content')
-@php
-    
-@endphp
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5>Cetak Absensi Semester {{ $data['semester']->name }} Kelas {{ $data['kelas']->name }}</h5>
+                    <h5>Rekap Absensi Mahasiswa Semester {{ $data['semester']->name }} Kelas {{ $data['kelas']->name }}</h5>
                 </div>
                 <div class="card-body">
                     <a href="{{ route('admin.cetak.index.kelas',[$data['semester']->id]) }}" class="btn btn-secondary">Kembali</a>
                     <hr>
-                    <table class="table table-striped" id="tables">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Minggu</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($data['week'] as $w)
-                            <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td><a href="{{ route('admin.rekap', [$data['semester']->id, $data['kelas']->id,$w->id] ) }}">{{ $w->name }}</a></td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <div class="row">
+                        @foreach ($data['week'] as $w)
+                        <div class="col-lg-3 col-6">
+                            <div class="small-box bg-danger">
+                                <div class="inner">
+                                    <p>Rekap</p>
+                                    <h3>{{ $w->name }}</h3>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <a href="{{ route('admin.rekap', [$data['semester']->id, $data['kelas']->id,$w->id] ) }}" class="small-box-footer">
+                                    Cetak <i class="fas fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>

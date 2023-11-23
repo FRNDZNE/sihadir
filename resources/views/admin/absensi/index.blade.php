@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title','Absensi')
+@section('admin.absensi','active')
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -33,9 +34,9 @@
                                     <h3>{{ $s->name }}</h3>
                                 </div>
                                 <div class="icon">
-                                    <i class="fas fa-school"></i>
+                                    <i class="fas fa-folder"></i>
                                 </div>
-                                <a href="" class="small-box-footer">
+                                <a href="{{ route('admin.absensi.kelas',$s->id) }}" class="small-box-footer">
                                     Masuk <i class="fas fa-arrow-circle-right"></i>
                                 </a>
                                 </div>
