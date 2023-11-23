@@ -175,12 +175,12 @@
                 <br>
                 <h6>Mengetahui :</h6>
                 <h6>Wakil Direktur I</h6>
-
-
             </td>
-
+            @php
+                $tanggal = date('d F Y');
+            @endphp
             <td valign="top">
-                <h6>Pontianak, 11 Agustus 2023</h6>
+                <h6>Pontianak, {{ $tanggal }}</h6>
                 <h6>Ketua</h6>
                 <h6>Jurusan Teknik Elektro</h6>
             </td>
